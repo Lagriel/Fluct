@@ -31,72 +31,63 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выборкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.новаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.листToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изменитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.краткийОтчётОВыборкеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сравнениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxSel = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRemoveSel = new System.Windows.Forms.Button();
+            this.buttonEditSel = new System.Windows.Forms.Button();
+            this.buttonNewSel = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelNameOfSel = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.labelTypeOfLeafs = new System.Windows.Forms.Label();
+            this.labelGradeValue = new System.Windows.Forms.Label();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelCommentValue = new System.Windows.Forms.Label();
+            this.labelPlace = new System.Windows.Forms.Label();
+            this.labelPlaceValue = new System.Windows.Forms.Label();
+            this.labelComment = new System.Windows.Forms.Label();
+            this.labelDateValue = new System.Windows.Forms.Label();
+            this.labelGrade = new System.Windows.Forms.Label();
+            this.labelTypeOfLeafsValue = new System.Windows.Forms.Label();
+            this.labelNameOfSelValue = new System.Windows.Forms.Label();
+            this.labelCountValue = new System.Windows.Forms.Label();
+            this.labelQuality = new System.Windows.Forms.Label();
+            this.labelQualityValue = new System.Windows.Forms.Label();
+            this.labelSigma = new System.Windows.Forms.Label();
+            this.labelSigmaValue = new System.Windows.Forms.Label();
+            this.comboBoxSels = new System.Windows.Forms.ComboBox();
+            this.groupBoxLeaf = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAddLeaf = new System.Windows.Forms.Button();
+            this.buttonEditLeaf = new System.Windows.Forms.Button();
+            this.buttonRemoveLeaf = new System.Windows.Forms.Button();
+            this.dataGridViewLeafs = new System.Windows.Forms.DataGridView();
+            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxSel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxLeaf.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeafs)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,20 +95,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(147, 174);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 11;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.выборкаToolStripMenuItem,
-            this.листToolStripMenuItem,
             this.отчётыToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -156,67 +137,6 @@
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-            // 
-            // выборкаToolStripMenuItem
-            // 
-            this.выборкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.новаяToolStripMenuItem,
-            this.изменитьToolStripMenuItem,
-            this.удалитьToolStripMenuItem});
-            this.выборкаToolStripMenuItem.Name = "выборкаToolStripMenuItem";
-            this.выборкаToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.выборкаToolStripMenuItem.Text = "Выборка";
-            // 
-            // новаяToolStripMenuItem
-            // 
-            this.новаяToolStripMenuItem.Name = "новаяToolStripMenuItem";
-            this.новаяToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.новаяToolStripMenuItem.Text = "Новая";
-            this.новаяToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // изменитьToolStripMenuItem
-            // 
-            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.изменитьToolStripMenuItem.Text = "Изменить";
-            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // листToolStripMenuItem
-            // 
-            this.листToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem,
-            this.изменитьToolStripMenuItem1,
-            this.удалитьToolStripMenuItem1});
-            this.листToolStripMenuItem.Name = "листToolStripMenuItem";
-            this.листToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.листToolStripMenuItem.Text = "Лист";
-            // 
-            // добавитьToolStripMenuItem
-            // 
-            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.добавитьToolStripMenuItem.Text = "Добавить";
-            this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // изменитьToolStripMenuItem1
-            // 
-            this.изменитьToolStripMenuItem1.Name = "изменитьToolStripMenuItem1";
-            this.изменитьToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
-            this.изменитьToolStripMenuItem1.Text = "Изменить";
-            // 
-            // удалитьToolStripMenuItem1
-            // 
-            this.удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
-            this.удалитьToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
-            this.удалитьToolStripMenuItem1.Text = "Удалить";
-            this.удалитьToolStripMenuItem1.Click += new System.EventHandler(this.button6_Click);
             // 
             // отчётыToolStripMenuItem
             // 
@@ -262,17 +182,17 @@
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
-            // groupBox1
+            // groupBoxSel
             // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel4);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 263);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Выборки";
+            this.groupBoxSel.Controls.Add(this.tableLayoutPanel4);
+            this.groupBoxSel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxSel.Enabled = false;
+            this.groupBoxSel.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxSel.Name = "groupBoxSel";
+            this.groupBoxSel.Size = new System.Drawing.Size(356, 263);
+            this.groupBoxSel.TabIndex = 14;
+            this.groupBoxSel.TabStop = false;
+            this.groupBoxSel.Text = "Выборки";
             // 
             // tableLayoutPanel4
             // 
@@ -280,7 +200,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.comboBoxSels, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -297,9 +217,9 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.buttonRemoveSel, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.buttonEditSel, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.buttonNewSel, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -309,65 +229,65 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(344, 29);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
-            // button3
+            // buttonRemoveSel
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(231, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonRemoveSel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRemoveSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveSel.Location = new System.Drawing.Point(231, 3);
+            this.buttonRemoveSel.Name = "buttonRemoveSel";
+            this.buttonRemoveSel.Size = new System.Drawing.Size(110, 23);
+            this.buttonRemoveSel.TabIndex = 21;
+            this.buttonRemoveSel.Text = "Удалить";
+            this.buttonRemoveSel.UseVisualStyleBackColor = true;
+            this.buttonRemoveSel.Click += new System.EventHandler(this.buttonRemoveSel_Click);
             // 
-            // button2
+            // buttonEditSel
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(117, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEditSel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditSel.Location = new System.Drawing.Point(117, 3);
+            this.buttonEditSel.Name = "buttonEditSel";
+            this.buttonEditSel.Size = new System.Drawing.Size(108, 23);
+            this.buttonEditSel.TabIndex = 20;
+            this.buttonEditSel.Text = "Изменить";
+            this.buttonEditSel.UseVisualStyleBackColor = true;
+            this.buttonEditSel.Click += new System.EventHandler(this.buttonEditSel_Click);
             // 
-            // button1
+            // buttonNewSel
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Новая выборка";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonNewSel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonNewSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewSel.Location = new System.Drawing.Point(3, 3);
+            this.buttonNewSel.Name = "buttonNewSel";
+            this.buttonNewSel.Size = new System.Drawing.Size(108, 23);
+            this.buttonNewSel.TabIndex = 19;
+            this.buttonNewSel.Text = "Новая выборка";
+            this.buttonNewSel.UseVisualStyleBackColor = true;
+            this.buttonNewSel.Click += new System.EventHandler(this.buttonNewSel_Click);
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label6, 1, 6);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label8, 1, 5);
-            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label5, 1, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label16, 0, 5);
-            this.tableLayoutPanel6.Controls.Add(this.label4, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label17, 0, 6);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 7);
-            this.tableLayoutPanel6.Controls.Add(this.label10, 1, 7);
-            this.tableLayoutPanel6.Controls.Add(this.label18, 0, 8);
-            this.tableLayoutPanel6.Controls.Add(this.label19, 1, 8);
+            this.tableLayoutPanel6.Controls.Add(this.labelNameOfSel, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelCount, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.labelTypeOfLeafs, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.labelGradeValue, 1, 6);
+            this.tableLayoutPanel6.Controls.Add(this.labelDate, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.labelCommentValue, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.labelPlace, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.labelPlaceValue, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.labelComment, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.labelDateValue, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.labelGrade, 0, 6);
+            this.tableLayoutPanel6.Controls.Add(this.labelTypeOfLeafsValue, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.labelNameOfSelValue, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelCountValue, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.labelQuality, 0, 7);
+            this.tableLayoutPanel6.Controls.Add(this.labelQualityValue, 1, 7);
+            this.tableLayoutPanel6.Controls.Add(this.labelSigma, 0, 8);
+            this.tableLayoutPanel6.Controls.Add(this.labelSigmaValue, 1, 8);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 73);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -384,188 +304,188 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(344, 168);
             this.tableLayoutPanel6.TabIndex = 31;
             // 
-            // label11
+            // labelNameOfSel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Название: ";
+            this.labelNameOfSel.AutoSize = true;
+            this.labelNameOfSel.Location = new System.Drawing.Point(3, 0);
+            this.labelNameOfSel.Name = "labelNameOfSel";
+            this.labelNameOfSel.Size = new System.Drawing.Size(63, 13);
+            this.labelNameOfSel.TabIndex = 12;
+            this.labelNameOfSel.Text = "Название: ";
             // 
-            // label12
+            // labelCount
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Количество листьев";
+            this.labelCount.AutoSize = true;
+            this.labelCount.Location = new System.Drawing.Point(3, 15);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(110, 13);
+            this.labelCount.TabIndex = 13;
+            this.labelCount.Text = "Количество листьев";
             // 
-            // label13
+            // labelTypeOfLeafs
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Вид растения";
+            this.labelTypeOfLeafs.AutoSize = true;
+            this.labelTypeOfLeafs.Location = new System.Drawing.Point(3, 30);
+            this.labelTypeOfLeafs.Name = "labelTypeOfLeafs";
+            this.labelTypeOfLeafs.Size = new System.Drawing.Size(76, 13);
+            this.labelTypeOfLeafs.TabIndex = 14;
+            this.labelTypeOfLeafs.Text = "Вид растения";
             // 
-            // label6
+            // labelGradeValue
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(153, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 28;
+            this.labelGradeValue.AutoSize = true;
+            this.labelGradeValue.Location = new System.Drawing.Point(153, 90);
+            this.labelGradeValue.Name = "labelGradeValue";
+            this.labelGradeValue.Size = new System.Drawing.Size(0, 13);
+            this.labelGradeValue.TabIndex = 28;
             // 
-            // label14
+            // labelDate
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 45);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Дата сбора";
+            this.labelDate.AutoSize = true;
+            this.labelDate.Location = new System.Drawing.Point(3, 45);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(66, 13);
+            this.labelDate.TabIndex = 15;
+            this.labelDate.Text = "Дата сбора";
             // 
-            // label8
+            // labelCommentValue
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(153, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
-            this.label8.TabIndex = 27;
+            this.labelCommentValue.AutoSize = true;
+            this.labelCommentValue.Location = new System.Drawing.Point(153, 75);
+            this.labelCommentValue.Name = "labelCommentValue";
+            this.labelCommentValue.Size = new System.Drawing.Size(0, 13);
+            this.labelCommentValue.TabIndex = 27;
             // 
-            // label15
+            // labelPlace
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 60);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 13);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Место сбора";
+            this.labelPlace.AutoSize = true;
+            this.labelPlace.Location = new System.Drawing.Point(3, 60);
+            this.labelPlace.Name = "labelPlace";
+            this.labelPlace.Size = new System.Drawing.Size(72, 13);
+            this.labelPlace.TabIndex = 16;
+            this.labelPlace.Text = "Место сбора";
             // 
-            // label5
+            // labelPlaceValue
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(153, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 26;
+            this.labelPlaceValue.AutoSize = true;
+            this.labelPlaceValue.Location = new System.Drawing.Point(153, 60);
+            this.labelPlaceValue.Name = "labelPlaceValue";
+            this.labelPlaceValue.Size = new System.Drawing.Size(0, 13);
+            this.labelPlaceValue.TabIndex = 26;
             // 
-            // label16
+            // labelComment
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 75);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(77, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Комментарий";
+            this.labelComment.AutoSize = true;
+            this.labelComment.Location = new System.Drawing.Point(3, 75);
+            this.labelComment.Name = "labelComment";
+            this.labelComment.Size = new System.Drawing.Size(77, 13);
+            this.labelComment.TabIndex = 17;
+            this.labelComment.Text = "Комментарий";
             // 
-            // label4
+            // labelDateValue
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
-            this.label4.TabIndex = 25;
+            this.labelDateValue.AutoSize = true;
+            this.labelDateValue.Location = new System.Drawing.Point(153, 45);
+            this.labelDateValue.Name = "labelDateValue";
+            this.labelDateValue.Size = new System.Drawing.Size(0, 13);
+            this.labelDateValue.TabIndex = 25;
             // 
-            // label17
+            // labelGrade
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 90);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(136, 26);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Степень флуктуирующей асимметрии";
+            this.labelGrade.AutoSize = true;
+            this.labelGrade.Location = new System.Drawing.Point(3, 90);
+            this.labelGrade.Name = "labelGrade";
+            this.labelGrade.Size = new System.Drawing.Size(136, 26);
+            this.labelGrade.TabIndex = 18;
+            this.labelGrade.Text = "Степень флуктуирующей асимметрии";
             // 
-            // label3
+            // labelTypeOfLeafsValue
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 24;
+            this.labelTypeOfLeafsValue.AutoSize = true;
+            this.labelTypeOfLeafsValue.Location = new System.Drawing.Point(153, 30);
+            this.labelTypeOfLeafsValue.Name = "labelTypeOfLeafsValue";
+            this.labelTypeOfLeafsValue.Size = new System.Drawing.Size(0, 13);
+            this.labelTypeOfLeafsValue.TabIndex = 24;
             // 
-            // label1
+            // labelNameOfSelValue
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 22;
+            this.labelNameOfSelValue.AutoSize = true;
+            this.labelNameOfSelValue.Location = new System.Drawing.Point(153, 0);
+            this.labelNameOfSelValue.Name = "labelNameOfSelValue";
+            this.labelNameOfSelValue.Size = new System.Drawing.Size(0, 13);
+            this.labelNameOfSelValue.TabIndex = 22;
             // 
-            // label2
+            // labelCountValue
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 23;
+            this.labelCountValue.AutoSize = true;
+            this.labelCountValue.Location = new System.Drawing.Point(153, 15);
+            this.labelCountValue.Name = "labelCountValue";
+            this.labelCountValue.Size = new System.Drawing.Size(0, 13);
+            this.labelCountValue.TabIndex = 23;
             // 
-            // label9
+            // labelQuality
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 13);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Качество среды";
+            this.labelQuality.AutoSize = true;
+            this.labelQuality.Location = new System.Drawing.Point(3, 120);
+            this.labelQuality.Name = "labelQuality";
+            this.labelQuality.Size = new System.Drawing.Size(89, 13);
+            this.labelQuality.TabIndex = 29;
+            this.labelQuality.Text = "Качество среды";
             // 
-            // label10
+            // labelQualityValue
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(153, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
-            this.label10.TabIndex = 30;
+            this.labelQualityValue.AutoSize = true;
+            this.labelQualityValue.Location = new System.Drawing.Point(153, 120);
+            this.labelQualityValue.Name = "labelQualityValue";
+            this.labelQualityValue.Size = new System.Drawing.Size(0, 13);
+            this.labelQualityValue.TabIndex = 30;
             // 
-            // label18
+            // labelSigma
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 140);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 26);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Среднее квадратическое отклонение σ ";
+            this.labelSigma.AutoSize = true;
+            this.labelSigma.Location = new System.Drawing.Point(3, 140);
+            this.labelSigma.Name = "labelSigma";
+            this.labelSigma.Size = new System.Drawing.Size(138, 26);
+            this.labelSigma.TabIndex = 31;
+            this.labelSigma.Text = "Среднее квадратическое отклонение σ ";
             // 
-            // label19
+            // labelSigmaValue
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(153, 140);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 13);
-            this.label19.TabIndex = 32;
+            this.labelSigmaValue.AutoSize = true;
+            this.labelSigmaValue.Location = new System.Drawing.Point(153, 140);
+            this.labelSigmaValue.Name = "labelSigmaValue";
+            this.labelSigmaValue.Size = new System.Drawing.Size(0, 13);
+            this.labelSigmaValue.TabIndex = 32;
             // 
-            // comboBox1
+            // comboBoxSels
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.comboBox1.Location = new System.Drawing.Point(3, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxSels.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxSels.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSels.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBoxSels.Location = new System.Drawing.Point(3, 38);
+            this.comboBoxSels.Name = "comboBoxSels";
+            this.comboBoxSels.Size = new System.Drawing.Size(344, 21);
+            this.comboBoxSels.TabIndex = 0;
+            this.comboBoxSels.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // groupBox2
+            // groupBoxLeaf
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(3, 272);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(356, 335);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Листья";
+            this.groupBoxLeaf.Controls.Add(this.tableLayoutPanel2);
+            this.groupBoxLeaf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxLeaf.Enabled = false;
+            this.groupBoxLeaf.Location = new System.Drawing.Point(3, 272);
+            this.groupBoxLeaf.Name = "groupBoxLeaf";
+            this.groupBoxLeaf.Size = new System.Drawing.Size(356, 335);
+            this.groupBoxLeaf.TabIndex = 15;
+            this.groupBoxLeaf.TabStop = false;
+            this.groupBoxLeaf.Text = "Листья";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridViewLeafs, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -582,9 +502,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button6, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonAddLeaf, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEditLeaf, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonRemoveLeaf, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -593,96 +513,96 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(344, 29);
             this.tableLayoutPanel3.TabIndex = 26;
             // 
-            // button4
+            // buttonAddLeaf
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Добавить лист";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonAddLeaf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAddLeaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddLeaf.Location = new System.Drawing.Point(3, 3);
+            this.buttonAddLeaf.Name = "buttonAddLeaf";
+            this.buttonAddLeaf.Size = new System.Drawing.Size(108, 23);
+            this.buttonAddLeaf.TabIndex = 22;
+            this.buttonAddLeaf.Text = "Добавить лист";
+            this.buttonAddLeaf.UseVisualStyleBackColor = true;
+            this.buttonAddLeaf.Click += new System.EventHandler(this.buttonAddLeaf_Click);
             // 
-            // button5
+            // buttonEditLeaf
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(117, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Изменить лист";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonEditLeaf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditLeaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditLeaf.Location = new System.Drawing.Point(117, 3);
+            this.buttonEditLeaf.Name = "buttonEditLeaf";
+            this.buttonEditLeaf.Size = new System.Drawing.Size(108, 23);
+            this.buttonEditLeaf.TabIndex = 23;
+            this.buttonEditLeaf.Text = "Изменить лист";
+            this.buttonEditLeaf.UseVisualStyleBackColor = true;
+            this.buttonEditLeaf.Click += new System.EventHandler(this.buttonEditLeaf_Click);
             // 
-            // button6
+            // buttonRemoveLeaf
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(231, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(110, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Удалить лист";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonRemoveLeaf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRemoveLeaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveLeaf.Location = new System.Drawing.Point(231, 3);
+            this.buttonRemoveLeaf.Name = "buttonRemoveLeaf";
+            this.buttonRemoveLeaf.Size = new System.Drawing.Size(110, 23);
+            this.buttonRemoveLeaf.TabIndex = 24;
+            this.buttonRemoveLeaf.Text = "Удалить лист";
+            this.buttonRemoveLeaf.UseVisualStyleBackColor = true;
+            this.buttonRemoveLeaf.Click += new System.EventHandler(this.buttonRemoveLeaf_Click);
             // 
-            // dataGridView1
+            // dataGridViewLeafs
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 38);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 275);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridViewLeafs.AllowUserToAddRows = false;
+            this.dataGridViewLeafs.AllowUserToDeleteRows = false;
+            this.dataGridViewLeafs.AllowUserToResizeColumns = false;
+            this.dataGridViewLeafs.AllowUserToResizeRows = false;
+            this.dataGridViewLeafs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLeafs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumber,
+            this.ColumnGrade,
+            this.ColumnComment});
+            this.dataGridViewLeafs.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataGridViewLeafs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewLeafs.Location = new System.Drawing.Point(3, 38);
+            this.dataGridViewLeafs.MultiSelect = false;
+            this.dataGridViewLeafs.Name = "dataGridViewLeafs";
+            this.dataGridViewLeafs.ReadOnly = true;
+            this.dataGridViewLeafs.RowHeadersVisible = false;
+            this.dataGridViewLeafs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewLeafs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewLeafs.Size = new System.Drawing.Size(344, 275);
+            this.dataGridViewLeafs.TabIndex = 16;
+            this.dataGridViewLeafs.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // Column1
+            // ColumnNumber
             // 
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 50;
+            this.ColumnNumber.FillWeight = 50F;
+            this.ColumnNumber.HeaderText = "#";
+            this.ColumnNumber.Name = "ColumnNumber";
+            this.ColumnNumber.ReadOnly = true;
+            this.ColumnNumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnNumber.Width = 50;
             // 
-            // Column2
+            // ColumnGrade
             // 
-            this.Column2.HeaderText = "%";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnGrade.HeaderText = "%";
+            this.ColumnGrade.Name = "ColumnGrade";
+            this.ColumnGrade.ReadOnly = true;
+            this.ColumnGrade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Column3
+            // ColumnComment
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "!";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnComment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnComment.HeaderText = "!";
+            this.ColumnComment.Name = "ColumnComment";
+            this.ColumnComment.ReadOnly = true;
+            this.ColumnComment.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxSel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxLeaf, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -698,24 +618,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 634);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(350, 500);
             this.Name = "Form1";
             this.Text = "Анализатор флуктуирующей асимметрии v0.4-alpfa";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.groupBoxSel.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBoxLeaf.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeafs)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -726,62 +646,53 @@
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выборкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem новаяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem листToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxSel;
+        private System.Windows.Forms.Label labelNameOfSel;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label labelGrade;
+        private System.Windows.Forms.Label labelComment;
+        private System.Windows.Forms.Label labelPlace;
+        private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.Label labelTypeOfLeafs;
+        private System.Windows.Forms.GroupBox groupBoxLeaf;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonNewSel;
+        private System.Windows.Forms.Button buttonRemoveSel;
+        private System.Windows.Forms.Button buttonEditSel;
+        private System.Windows.Forms.Button buttonAddLeaf;
+        private System.Windows.Forms.Button buttonRemoveLeaf;
+        private System.Windows.Forms.Button buttonEditLeaf;
+        private System.Windows.Forms.ComboBox comboBoxSels;
+        private System.Windows.Forms.Label labelCommentValue;
+        private System.Windows.Forms.Label labelPlaceValue;
+        private System.Windows.Forms.Label labelDateValue;
+        private System.Windows.Forms.Label labelTypeOfLeafsValue;
+        private System.Windows.Forms.Label labelCountValue;
+        private System.Windows.Forms.Label labelNameOfSelValue;
+        private System.Windows.Forms.Label labelGradeValue;
+        private System.Windows.Forms.DataGridView dataGridViewLeafs;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnComment;
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem краткийОтчётОВыборкеToolStripMenuItem;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label labelQuality;
+        private System.Windows.Forms.Label labelQualityValue;
+        private System.Windows.Forms.Label labelSigma;
+        private System.Windows.Forms.Label labelSigmaValue;
         private System.Windows.Forms.ToolStripMenuItem сравнениеToolStripMenuItem;
     }
 }

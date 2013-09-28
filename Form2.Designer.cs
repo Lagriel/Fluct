@@ -32,37 +32,37 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonOpenImage = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageActoins = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelHint = new System.Windows.Forms.Label();
+            this.tabPageResult = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAll = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelFluct = new System.Windows.Forms.Label();
+            this.labelFluctValue = new System.Windows.Forms.Label();
+            this.labelCommentName = new System.Windows.Forms.Label();
+            this.textBoxComment = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageActoins.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageResult.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,61 +76,61 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
-            // button1
+            // buttonSave
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(215, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 52);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSave.Enabled = false;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Location = new System.Drawing.Point(215, 3);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(207, 52);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // button3
+            // buttonOpenImage
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(405, 58);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Открыть изображение";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonOpenImage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonOpenImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonOpenImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenImage.Location = new System.Drawing.Point(3, 3);
+            this.buttonOpenImage.Name = "buttonOpenImage";
+            this.buttonOpenImage.Size = new System.Drawing.Size(405, 58);
+            this.buttonOpenImage.TabIndex = 3;
+            this.buttonOpenImage.Text = "Открыть изображение";
+            this.buttonOpenImage.UseVisualStyleBackColor = false;
+            this.buttonOpenImage.Click += new System.EventHandler(this.buttonOpenImage_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button11
+            // buttonCancel
             // 
-            this.button11.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(3, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(206, 52);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Отмена";
-            this.button11.UseVisualStyleBackColor = true;
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Location = new System.Drawing.Point(3, 3);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(206, 52);
+            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonEdit
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(3, 370);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(405, 60);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Обнулить";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.Location = new System.Drawing.Point(3, 370);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(405, 60);
+            this.buttonEdit.TabIndex = 13;
+            this.buttonEdit.Text = "Обнулить";
+            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -153,8 +153,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tabControl1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.labelCommentName, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxComment, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(408, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -171,8 +171,8 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.button11, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonCancel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonSave, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 579);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -184,8 +184,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageActoins);
+            this.tabControl1.Controls.Add(this.tabPageResult);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
@@ -193,24 +193,24 @@
             this.tabControl1.Size = new System.Drawing.Size(425, 465);
             this.tabControl1.TabIndex = 17;
             // 
-            // tabPage1
+            // tabPageActoins
             // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(417, 439);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Действия";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageActoins.Controls.Add(this.tableLayoutPanel5);
+            this.tabPageActoins.Location = new System.Drawing.Point(4, 22);
+            this.tabPageActoins.Name = "tabPageActoins";
+            this.tabPageActoins.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageActoins.Size = new System.Drawing.Size(417, 439);
+            this.tabPageActoins.TabIndex = 0;
+            this.tabPageActoins.Text = "Действия";
+            this.tabPageActoins.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.button2, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.labelHint, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.buttonEdit, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.buttonOpenImage, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -221,26 +221,26 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(411, 433);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
-            // label1
+            // labelHint
             // 
-            this.label1.AutoEllipsis = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 303);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.labelHint.AutoEllipsis = true;
+            this.labelHint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelHint.Location = new System.Drawing.Point(3, 64);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(405, 303);
+            this.labelHint.TabIndex = 0;
+            this.labelHint.Text = "labelHint";
             // 
-            // tabPage2
+            // tabPageResult
             // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(417, 439);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Результаты";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageResult.Controls.Add(this.tableLayoutPanel4);
+            this.tabPageResult.Location = new System.Drawing.Point(4, 22);
+            this.tabPageResult.Name = "tabPageResult";
+            this.tabPageResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageResult.Size = new System.Drawing.Size(417, 439);
+            this.tabPageResult.TabIndex = 1;
+            this.tabPageResult.Text = "Результаты";
+            this.tabPageResult.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
@@ -248,8 +248,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.labelFluct, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labelFluctValue, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -267,10 +267,10 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.ColumnName,
+            this.ColumnLeft,
+            this.ColumnRight,
+            this.ColumnAll});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -284,86 +284,86 @@
             this.dataGridView1.Size = new System.Drawing.Size(405, 387);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column1
+            // ColumnName
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 65F;
-            this.Column1.HeaderText = "Признак";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnName.FillWeight = 65F;
+            this.ColumnName.HeaderText = "Признак";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column2
+            // ColumnLeft
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnLeft.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.NullValue = null;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.FillWeight = 15F;
-            this.Column2.HeaderText = "Левый";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnLeft.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnLeft.FillWeight = 15F;
+            this.ColumnLeft.HeaderText = "Левый";
+            this.ColumnLeft.Name = "ColumnLeft";
+            this.ColumnLeft.ReadOnly = true;
+            this.ColumnLeft.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnLeft.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column3
+            // ColumnRight
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 15F;
-            this.Column3.HeaderText = "Правый";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnRight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnRight.FillWeight = 15F;
+            this.ColumnRight.HeaderText = "Правый";
+            this.ColumnRight.Name = "ColumnRight";
+            this.ColumnRight.ReadOnly = true;
+            this.ColumnRight.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnRight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column4
+            // ColumnAll
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 15F;
-            this.Column4.HeaderText = "Общий";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAll.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnAll.FillWeight = 15F;
+            this.ColumnAll.HeaderText = "Общий";
+            this.ColumnAll.Name = "ColumnAll";
+            this.ColumnAll.ReadOnly = true;
+            this.ColumnAll.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAll.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // label2
+            // labelFluct
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 393);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Степень флуктуирующей ассимметрии";
+            this.labelFluct.AutoSize = true;
+            this.labelFluct.Location = new System.Drawing.Point(3, 393);
+            this.labelFluct.Name = "labelFluct";
+            this.labelFluct.Size = new System.Drawing.Size(205, 13);
+            this.labelFluct.TabIndex = 1;
+            this.labelFluct.Text = "Степень флуктуирующей ассимметрии";
             // 
-            // label3
+            // labelFluctValue
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 413);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 2;
+            this.labelFluctValue.AutoSize = true;
+            this.labelFluctValue.Location = new System.Drawing.Point(3, 413);
+            this.labelFluctValue.Name = "labelFluctValue";
+            this.labelFluctValue.Size = new System.Drawing.Size(0, 13);
+            this.labelFluctValue.TabIndex = 2;
             // 
-            // label4
+            // labelCommentName
             // 
-            this.label4.Location = new System.Drawing.Point(3, 471);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 11);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Комментарий";
+            this.labelCommentName.Location = new System.Drawing.Point(3, 471);
+            this.labelCommentName.Name = "labelCommentName";
+            this.labelCommentName.Size = new System.Drawing.Size(77, 11);
+            this.labelCommentName.TabIndex = 0;
+            this.labelCommentName.Text = "Комментарий";
             // 
-            // textBox1
+            // textBoxComment
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 485);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(425, 88);
-            this.textBox1.TabIndex = 0;
+            this.textBoxComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxComment.Location = new System.Drawing.Point(3, 485);
+            this.textBoxComment.Multiline = true;
+            this.textBoxComment.Name = "textBoxComment";
+            this.textBoxComment.Size = new System.Drawing.Size(425, 88);
+            this.textBoxComment.TabIndex = 0;
             // 
             // Form2
             // 
@@ -381,9 +381,9 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageActoins.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabPageResult.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -394,28 +394,28 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonOpenImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageActoins;
+        private System.Windows.Forms.Label labelHint;
+        private System.Windows.Forms.TabPage tabPageResult;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelFluct;
+        private System.Windows.Forms.Label labelFluctValue;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLeft;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAll;
+        private System.Windows.Forms.Label labelCommentName;
+        private System.Windows.Forms.TextBox textBoxComment;
     }
 }

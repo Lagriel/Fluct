@@ -24,12 +24,12 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            name = textBox1.Text;
-            place = textBox2.Text;
-            user = textBox3.Text;
-            date = dateTimePicker1.Value;
-            type = comboBox1.SelectedIndex;
-            comment = textBox4.Text;
+            name = textBoxName.Text;
+            place = textBoxPlace.Text;
+            user = textBoxAuthor.Text;
+            date = dateTimePickerDate.Value;
+            type = comboBoxType.SelectedIndex;
+            comment = textBoxComment.Text;
 
 
             ParametersCollection parametr = new ParametersCollection();

@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
 
         // Удалить лист
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonRemoveLeaf_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Вы уверенны?", "Удаление листа", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
         
         // Добавить лист
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonAddLeaf_Click(object sender, EventArgs e)
         {
             Data.creating = true;
             Form2 f = new Form2();
@@ -52,11 +52,11 @@ namespace WindowsFormsApplication1
             openFileDialog1.Filter = "DataBasa files (*.db)|*.db";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {                
-                button4.Enabled = button6.Enabled = true;
+                отчётыToolStripMenuItem.Enabled = buttonAddLeaf.Enabled = buttonRemoveLeaf.Enabled = true;
                 Data.sPath = openFileDialog1.FileName;
-                groupBox1.Enabled = true;
+                groupBoxSel.Enabled = true;
                 UpdadeSel();
-                if (comboBox1.Items.Count>0) comboBox1.SelectedIndex = 0;
+                if (comboBoxSels.Items.Count>0) comboBoxSels.SelectedIndex = 0;
             }            
         }
         
@@ -69,8 +69,8 @@ namespace WindowsFormsApplication1
             saveFileDialog1.Filter = "DataBasa files (*.db)|*.db";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {                
-                dataGridView1.Rows.Clear();
-                button4.Enabled = button6.Enabled = true;
+                dataGridViewLeafs.Rows.Clear();
+                отчётыToolStripMenuItem.Enabled = buttonAddLeaf.Enabled = buttonRemoveLeaf.Enabled = true;
                 Data.sPath = saveFileDialog1.FileName;
                 Data.bd = new DbFacadeSQLite(Data.sPath);                
 
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
                 
                 Data.bd.ExecuteNonQuery(Data.sSql);
                       
-                groupBox1.Enabled = true;
+                groupBoxSel.Enabled = true;
             UpdadeSel();
             }
         }
@@ -121,14 +121,14 @@ namespace WindowsFormsApplication1
         //Обновление списка выборок
         private void UpdadeSel()
         {
-            comboBox1.Items.Clear();
+            comboBoxSels.Items.Clear();
             Data.bd = new DbFacadeSQLite(Data.sPath);
             DataTable dt = Data.bd.Execute("SELECT id, name, grade FROM sel");            
             foreach (DataRow row in dt.Rows)
             {                           
-                comboBox1.Items.Add(row["id"].ToString() + "  " + row["name"].ToString() + "  " + row["grade"].ToString());                
+                comboBoxSels.Items.Add(row["id"].ToString() + "  " + row["name"].ToString() + "  " + row["grade"].ToString());                
             }            
-            button3.Enabled = ((comboBox1.Items.Count > 0) ? true : false);
+            buttonRemoveSel.Enabled = ((comboBoxSels.Items.Count > 0) ? true : false);
         }
         
 
@@ -136,27 +136,28 @@ namespace WindowsFormsApplication1
         //Обновление списка листьев
         private void UpdateLeaf()
         {            
-            dataGridView1.Rows.Clear();
+            dataGridViewLeafs.Rows.Clear();
             Data.bd = new DbFacadeSQLite(Data.sPath);
             DataTable dt = Data.bd.Execute("SELECT id, grade, comment FROM leaf WHERE sel_id = "+ Data.sel.ToString());
             foreach (DataRow row in dt.Rows)
             {                               
-                dataGridView1.Rows.Add(row["id"].ToString(), row["grade"], row["comment"]);
+                dataGridViewLeafs.Rows.Add(row["id"].ToString(), row["grade"], row["comment"]);
             }
-            label6.Text = fa(Data.sel).ToString();            
-            button6.Enabled = ((dataGridView1.Rows.Count > 0) ? true : false);
+            labelGradeValue.Text = fa(Data.sel).ToString();            
+            buttonRemoveLeaf.Enabled = ((dataGridViewLeafs.Rows.Count > 0) ? true : false);
             UpdateAboutSel();
         }
         
 
 
         //Новая выборка
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonNewSel_Click(object sender, EventArgs e)
         {
             Form3 f = new Form3();
             f.ShowDialog();
             if (f.DialogResult == DialogResult.OK)
             UpdadeSel();
+            if (comboBoxSels.Items.Count > 0) comboBoxSels.SelectedIndex = comboBoxSels.Items.Count-1;
         }
         
 
@@ -164,7 +165,7 @@ namespace WindowsFormsApplication1
         //Обновление описание выборки
         private void UpdateAboutSel()
         {
-            Data.sel = Convert.ToInt32(comboBox1.Text.Split(' ')[0]);
+            Data.sel = Convert.ToInt32(comboBoxSels.Text.Split(' ')[0]);
             Data.bd = new DbFacadeSQLite(Data.sPath);
 
             //формируем запрос
@@ -175,19 +176,19 @@ namespace WindowsFormsApplication1
             //выполняем
             Dictionary<string, object> item = Data.bd.FetchOneRow(select);
             //далее получаем значения
-            label1.Text = item["name"].ToString();
-            label4.Text = item["date"].ToString();
-            label5.Text = item["place"].ToString();
-            label8.Text = item["comment"].ToString();
-            groupBox2.Enabled = true;
-            label2.Text = dataGridView1.Rows.Count.ToString();
+            labelNameOfSelValue.Text = item["name"].ToString();
+            labelDateValue.Text = item["date"].ToString();
+            labelPlaceValue.Text = item["place"].ToString();
+            labelCommentValue.Text = item["comment"].ToString();
+            groupBoxLeaf.Enabled = true;
+            labelCountValue.Text = dataGridViewLeafs.Rows.Count.ToString();
             Data.type = Convert.ToInt32(item["typeofleaf_id"]);
-            label3.Text = Data.typeOfLeafToText(Data.type);            
+            labelTypeOfLeafsValue.Text = Data.typeOfLeafToText(Data.type);            
 
             try
             {
-                label10.Text =  Data.qualityText((double)item["grade"]);
-                label19.Text = item["deviation"].ToString();
+                labelQualityValue.Text =  Data.qualityText((double)item["grade"]);
+                labelSigmaValue.Text = item["deviation"].ToString();
             }
             catch (Exception ex)
             { }
@@ -206,7 +207,7 @@ namespace WindowsFormsApplication1
 
 
         //Удаление выборки
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonRemoveSel_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Вы уверенны?", "Удаление выборки", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -214,6 +215,7 @@ namespace WindowsFormsApplication1
                 Data.bd.Delete("leaf", "sel_id = " + Data.sel.ToString());
                 UpdadeSel();
             }
+            if (comboBoxSels.Items.Count > 0) comboBoxSels.SelectedIndex = 0;
         }
         
 
@@ -239,7 +241,7 @@ namespace WindowsFormsApplication1
                 sigma+=Math.Pow(Convert.ToDouble(row["grade"]) - grade, 2);                
             }
             sigma = Math.Sqrt(sigma / (dt.Rows.Count - 1));
-            label19.Text = sigma.ToString();
+            labelSigmaValue.Text = sigma.ToString();
 
             ParametersCollection parameters = new ParametersCollection();
             parameters.Add("grade", grade, DbType.Double);
@@ -258,7 +260,7 @@ namespace WindowsFormsApplication1
 
 
         //Изменить выборку
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonEditSel_Click(object sender, EventArgs e)
         {
             Form4 f = new Form4();
             f.ShowDialog();
@@ -270,14 +272,14 @@ namespace WindowsFormsApplication1
         //выбор листа
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedCells.Count > 0)
-            Data.leaf = Convert.ToInt32(dataGridView1.SelectedCells[0].Value);            
+            if(dataGridViewLeafs.SelectedCells.Count > 0)
+            Data.leaf = Convert.ToInt32(dataGridViewLeafs.SelectedCells[0].Value);            
 
         }
 
 
         //изменить лист
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonEditLeaf_Click(object sender, EventArgs e)
         {
             Data.creating = false;
             Form2 f = new Form2();
@@ -297,6 +299,17 @@ namespace WindowsFormsApplication1
         {
             Form6 f = new Form6();
             f.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //buttonAddLeaf.Enabled = false;
+            //buttonEditLeaf.Enabled = false;
+            //buttonEditSel.Enabled = false;
+            //buttonNewSel.Enabled = false;
+            //buttonRemoveLeaf.Enabled = false;
+            //buttonRemoveSel.Enabled = false;            
+            отчётыToolStripMenuItem.Enabled = false;
         }
         
 

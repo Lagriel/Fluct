@@ -41,13 +41,13 @@ namespace WindowsFormsApplication1
 
             if (Data.creating)
             {
-                button2.Enabled = false;
-                button3.Enabled = true;
+                buttonEdit.Enabled = false;
+                buttonOpenImage.Enabled = true;
             }
             else
             {
-                button2.Enabled = true;
-                button3.Enabled = false;
+                buttonEdit.Enabled = true;
+                buttonOpenImage.Enabled = false;
                 Data.bd = new DbFacadeSQLite(Data.sPath);                
                 //формируем запрос
                 Select select = new Select()
@@ -72,13 +72,13 @@ namespace WindowsFormsApplication1
                 Array.Clear(br, 0, br.Length);
                 leaf.drawInitLine(pictureBox1.Image);
                 // Заполняем таблицу
-                label3.Text = leaf.assim(dataGridView1).ToString();
+                labelFluctValue.Text = leaf.assim(dataGridView1).ToString();
                 tabControl1.SelectTab(1);
-                label1.Text = leaf.getHint(1);
-                textBox1.Text = item["comment"].ToString();            
+                labelHint.Text = leaf.getHint(1);
+                textBoxComment.Text = item["comment"].ToString();            
             }
 
-                label1.Text = leaf.getHint(0);
+                labelHint.Text = leaf.getHint(0);
             
         }
 
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1
 
 
         //Открытие изображения
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonOpenImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image files (*.BMP, *.JPG, *.GIF, *.TIF, *.PNG, *.ICO, *.EMF, *.WMF)|*.bmp;*.jpg;*.gif; *.tif; *.png; *.ico; *.emf; *.wmf";
             openFileDialog1.FileName = "";
@@ -137,8 +137,8 @@ namespace WindowsFormsApplication1
                 leaf.img = ResizeImg(img, 400, pictureBox1.Height);
                 active = true;
                 pictureBox1.Image = (Image)leaf.img.Clone();
-                label1.Text = leaf.getHint(1);
-                button2.Enabled = true;                
+                labelHint.Text = leaf.getHint(1);
+                buttonEdit.Enabled = true;                
             }
         }
     
@@ -148,28 +148,29 @@ namespace WindowsFormsApplication1
         {            
             if (active)
             {                
-                label1.Text = leaf.getHint(pnum+2);
+                labelHint.Text = leaf.getHint(pnum+2);
                 if (leaf.draw(pictureBox1.Image, pnum, e))
                 { 
-                    button3.Enabled = false;
+                    buttonOpenImage.Enabled = false;
                     tabControl1.SelectTab(0);
                 }
                 else
                 {
                     active = false;
-                    button1.Enabled = true;                    
-                    label3.Text = leaf.assim(dataGridView1).ToString();
+                    buttonSave.Enabled = true;                    
+                    labelFluctValue.Text = leaf.assim(dataGridView1).ToString();
                     tabControl1.SelectTab(1);             
                 }
                 pictureBox1.Invalidate();
-                pnum++;                                        
+                pnum++;
+                pictureBox1.Refresh();                       
             }            
         }
 
 
  
         //Сохранить
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             MemoryStream ms = new MemoryStream();// Store it in Binary Array as Stream
             MemoryStream ms2 = new MemoryStream();                      
@@ -179,7 +180,7 @@ namespace WindowsFormsApplication1
             byte[] arrImage = ms.GetBuffer();
             // Записали картинку в поток
             ms2.Write(arrImage, 0, arrImage.Length);
-            comment = (textBox1.Text == "") ? "-" : textBox1.Text;
+            comment = (textBoxComment.Text == "") ? "-" : textBoxComment.Text;
             ParametersCollection parametr = new ParametersCollection();
             parametr.Add("params", leaf.getParams(), DbType.Binary);            
             parametr.Add("pic", ms2.GetBuffer(), DbType.Binary);
@@ -194,15 +195,19 @@ namespace WindowsFormsApplication1
             
         
         //Обнулить
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Временно не работает","Увы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             pnum = 0;
-            button1.Enabled = false;
-            button3.Enabled = true;
-            active = true;            
-            pictureBox1.Image = (Bitmap)leaf.img.Clone();            
-            dataGridView1.Rows.Clear();            
+            buttonSave.Enabled = false;
+            buttonOpenImage.Enabled = true;
+            active = true;
+            pictureBox1.Image.Dispose();
+            pictureBox1.Image = null;
+            GC.Collect();         
+            pictureBox1.Image = new Bitmap((Bitmap)leaf.img.Clone());            
+            dataGridView1.Rows.Clear();
+            pictureBox1.Refresh();
         }
 
 

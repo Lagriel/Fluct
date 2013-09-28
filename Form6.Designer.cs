@@ -31,47 +31,47 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.labelNameLeft = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.labelType = new System.Windows.Forms.Label();
+            this.labelGradeValueLeft = new System.Windows.Forms.Label();
+            this.labelDateLeft = new System.Windows.Forms.Label();
+            this.labelCommentValueLeft = new System.Windows.Forms.Label();
+            this.labelPlaceLeft = new System.Windows.Forms.Label();
+            this.labelPlaceValueLeft = new System.Windows.Forms.Label();
+            this.labelCommentLeft = new System.Windows.Forms.Label();
+            this.labelDateValueLeft = new System.Windows.Forms.Label();
+            this.labelGradeLeft = new System.Windows.Forms.Label();
+            this.labelTypeValueLeft = new System.Windows.Forms.Label();
+            this.labelNameValueLeft = new System.Windows.Forms.Label();
+            this.labelCountValueLeft = new System.Windows.Forms.Label();
+            this.labelQualityLeft = new System.Windows.Forms.Label();
+            this.labelQualityValueLeft = new System.Windows.Forms.Label();
+            this.labelSigmaLeft = new System.Windows.Forms.Label();
+            this.labelSigmaValueLeft = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
+            this.labelNameRight = new System.Windows.Forms.Label();
+            this.labelCountRight = new System.Windows.Forms.Label();
+            this.labelTupeRight = new System.Windows.Forms.Label();
+            this.labelGradeValueRight = new System.Windows.Forms.Label();
+            this.labelDateRight = new System.Windows.Forms.Label();
+            this.labelCommentValueRight = new System.Windows.Forms.Label();
+            this.labelPlaceRight = new System.Windows.Forms.Label();
+            this.labelPlaceValueRight = new System.Windows.Forms.Label();
+            this.labelCommentRight = new System.Windows.Forms.Label();
+            this.labelDateValueRight = new System.Windows.Forms.Label();
+            this.labelGradeRight = new System.Windows.Forms.Label();
+            this.labelTypeValueRight = new System.Windows.Forms.Label();
+            this.labelNameValueRight = new System.Windows.Forms.Label();
+            this.labelCountValueRight = new System.Windows.Forms.Label();
+            this.labelQualityRight = new System.Windows.Forms.Label();
+            this.labelQualityValueRight = new System.Windows.Forms.Label();
+            this.labelSigmaRight = new System.Windows.Forms.Label();
+            this.labelSigmaValueRight = new System.Windows.Forms.Label();
+            this.comboBoxRight = new System.Windows.Forms.ComboBox();
+            this.comboBoxLeft = new System.Windows.Forms.ComboBox();
+            this.buttonRun = new System.Windows.Forms.Button();
+            this.labelResult = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -83,8 +83,8 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label37, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRun, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelResult, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -102,8 +102,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxRight, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxLeft, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -118,24 +118,24 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label21, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label22, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.label23, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label24, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.label25, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label26, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label27, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.label28, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label29, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.label30, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label31, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label32, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label33, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.label34, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.label35, 0, 8);
-            this.tableLayoutPanel3.Controls.Add(this.label36, 1, 8);
+            this.tableLayoutPanel3.Controls.Add(this.labelNameLeft, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelCount, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelType, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.labelGradeValueLeft, 1, 6);
+            this.tableLayoutPanel3.Controls.Add(this.labelDateLeft, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.labelCommentValueLeft, 1, 5);
+            this.tableLayoutPanel3.Controls.Add(this.labelPlaceLeft, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.labelPlaceValueLeft, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.labelCommentLeft, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.labelDateValueLeft, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.labelGradeLeft, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.labelTypeValueLeft, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.labelNameValueLeft, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelCountValueLeft, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelQualityLeft, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.labelQualityValueLeft, 1, 7);
+            this.tableLayoutPanel3.Controls.Add(this.labelSigmaLeft, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.labelSigmaValueLeft, 1, 8);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -152,182 +152,182 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 202);
             this.tableLayoutPanel3.TabIndex = 33;
             // 
-            // label7
+            // labelNameLeft
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Название: ";
+            this.labelNameLeft.AutoSize = true;
+            this.labelNameLeft.Location = new System.Drawing.Point(3, 0);
+            this.labelNameLeft.Name = "labelNameLeft";
+            this.labelNameLeft.Size = new System.Drawing.Size(63, 13);
+            this.labelNameLeft.TabIndex = 12;
+            this.labelNameLeft.Text = "Название: ";
             // 
-            // label20
+            // labelCount
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(3, 15);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 13);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Количество листьев";
+            this.labelCount.AutoSize = true;
+            this.labelCount.Location = new System.Drawing.Point(3, 15);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(110, 13);
+            this.labelCount.TabIndex = 13;
+            this.labelCount.Text = "Количество листьев";
             // 
-            // label21
+            // labelType
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 30);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(76, 13);
-            this.label21.TabIndex = 14;
-            this.label21.Text = "Вид растения";
+            this.labelType.AutoSize = true;
+            this.labelType.Location = new System.Drawing.Point(3, 30);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(76, 13);
+            this.labelType.TabIndex = 14;
+            this.labelType.Text = "Вид растения";
             // 
-            // label22
+            // labelGradeValueLeft
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(153, 90);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 13);
-            this.label22.TabIndex = 28;
+            this.labelGradeValueLeft.AutoSize = true;
+            this.labelGradeValueLeft.Location = new System.Drawing.Point(153, 90);
+            this.labelGradeValueLeft.Name = "labelGradeValueLeft";
+            this.labelGradeValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelGradeValueLeft.TabIndex = 28;
             // 
-            // label23
+            // labelDateLeft
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 45);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(66, 13);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "Дата сбора";
+            this.labelDateLeft.AutoSize = true;
+            this.labelDateLeft.Location = new System.Drawing.Point(3, 45);
+            this.labelDateLeft.Name = "labelDateLeft";
+            this.labelDateLeft.Size = new System.Drawing.Size(66, 13);
+            this.labelDateLeft.TabIndex = 15;
+            this.labelDateLeft.Text = "Дата сбора";
             // 
-            // label24
+            // labelCommentValueLeft
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(153, 75);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 13);
-            this.label24.TabIndex = 27;
+            this.labelCommentValueLeft.AutoSize = true;
+            this.labelCommentValueLeft.Location = new System.Drawing.Point(153, 75);
+            this.labelCommentValueLeft.Name = "labelCommentValueLeft";
+            this.labelCommentValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelCommentValueLeft.TabIndex = 27;
             // 
-            // label25
+            // labelPlaceLeft
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 60);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(72, 13);
-            this.label25.TabIndex = 16;
-            this.label25.Text = "Место сбора";
+            this.labelPlaceLeft.AutoSize = true;
+            this.labelPlaceLeft.Location = new System.Drawing.Point(3, 60);
+            this.labelPlaceLeft.Name = "labelPlaceLeft";
+            this.labelPlaceLeft.Size = new System.Drawing.Size(72, 13);
+            this.labelPlaceLeft.TabIndex = 16;
+            this.labelPlaceLeft.Text = "Место сбора";
             // 
-            // label26
+            // labelPlaceValueLeft
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(153, 60);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(0, 13);
-            this.label26.TabIndex = 26;
+            this.labelPlaceValueLeft.AutoSize = true;
+            this.labelPlaceValueLeft.Location = new System.Drawing.Point(153, 60);
+            this.labelPlaceValueLeft.Name = "labelPlaceValueLeft";
+            this.labelPlaceValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelPlaceValueLeft.TabIndex = 26;
             // 
-            // label27
+            // labelCommentLeft
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(3, 75);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(77, 13);
-            this.label27.TabIndex = 17;
-            this.label27.Text = "Комментарий";
+            this.labelCommentLeft.AutoSize = true;
+            this.labelCommentLeft.Location = new System.Drawing.Point(3, 75);
+            this.labelCommentLeft.Name = "labelCommentLeft";
+            this.labelCommentLeft.Size = new System.Drawing.Size(77, 13);
+            this.labelCommentLeft.TabIndex = 17;
+            this.labelCommentLeft.Text = "Комментарий";
             // 
-            // label28
+            // labelDateValueLeft
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(153, 45);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(0, 13);
-            this.label28.TabIndex = 25;
+            this.labelDateValueLeft.AutoSize = true;
+            this.labelDateValueLeft.Location = new System.Drawing.Point(153, 45);
+            this.labelDateValueLeft.Name = "labelDateValueLeft";
+            this.labelDateValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelDateValueLeft.TabIndex = 25;
             // 
-            // label29
+            // labelGradeLeft
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 90);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(136, 26);
-            this.label29.TabIndex = 18;
-            this.label29.Text = "Степень флуктуирующей асимметрии";
+            this.labelGradeLeft.AutoSize = true;
+            this.labelGradeLeft.Location = new System.Drawing.Point(3, 90);
+            this.labelGradeLeft.Name = "labelGradeLeft";
+            this.labelGradeLeft.Size = new System.Drawing.Size(136, 26);
+            this.labelGradeLeft.TabIndex = 18;
+            this.labelGradeLeft.Text = "Степень флуктуирующей асимметрии";
             // 
-            // label30
+            // labelTypeValueLeft
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(153, 30);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(0, 13);
-            this.label30.TabIndex = 24;
+            this.labelTypeValueLeft.AutoSize = true;
+            this.labelTypeValueLeft.Location = new System.Drawing.Point(153, 30);
+            this.labelTypeValueLeft.Name = "labelTypeValueLeft";
+            this.labelTypeValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelTypeValueLeft.TabIndex = 24;
             // 
-            // label31
+            // labelNameValueLeft
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(153, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(0, 13);
-            this.label31.TabIndex = 22;
+            this.labelNameValueLeft.AutoSize = true;
+            this.labelNameValueLeft.Location = new System.Drawing.Point(153, 0);
+            this.labelNameValueLeft.Name = "labelNameValueLeft";
+            this.labelNameValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelNameValueLeft.TabIndex = 22;
             // 
-            // label32
+            // labelCountValueLeft
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(153, 15);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(0, 13);
-            this.label32.TabIndex = 23;
+            this.labelCountValueLeft.AutoSize = true;
+            this.labelCountValueLeft.Location = new System.Drawing.Point(153, 15);
+            this.labelCountValueLeft.Name = "labelCountValueLeft";
+            this.labelCountValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelCountValueLeft.TabIndex = 23;
             // 
-            // label33
+            // labelQualityLeft
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 120);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(89, 13);
-            this.label33.TabIndex = 29;
-            this.label33.Text = "Качество среды";
+            this.labelQualityLeft.AutoSize = true;
+            this.labelQualityLeft.Location = new System.Drawing.Point(3, 120);
+            this.labelQualityLeft.Name = "labelQualityLeft";
+            this.labelQualityLeft.Size = new System.Drawing.Size(89, 13);
+            this.labelQualityLeft.TabIndex = 29;
+            this.labelQualityLeft.Text = "Качество среды";
             // 
-            // label34
+            // labelQualityValueLeft
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(153, 120);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(0, 13);
-            this.label34.TabIndex = 30;
+            this.labelQualityValueLeft.AutoSize = true;
+            this.labelQualityValueLeft.Location = new System.Drawing.Point(153, 120);
+            this.labelQualityValueLeft.Name = "labelQualityValueLeft";
+            this.labelQualityValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelQualityValueLeft.TabIndex = 30;
             // 
-            // label35
+            // labelSigmaLeft
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(3, 161);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(138, 26);
-            this.label35.TabIndex = 31;
-            this.label35.Text = "Среднее квадратическое отклонение σ ";
+            this.labelSigmaLeft.AutoSize = true;
+            this.labelSigmaLeft.Location = new System.Drawing.Point(3, 161);
+            this.labelSigmaLeft.Name = "labelSigmaLeft";
+            this.labelSigmaLeft.Size = new System.Drawing.Size(138, 26);
+            this.labelSigmaLeft.TabIndex = 31;
+            this.labelSigmaLeft.Text = "Среднее квадратическое отклонение σ ";
             // 
-            // label36
+            // labelSigmaValueLeft
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(153, 161);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(0, 13);
-            this.label36.TabIndex = 32;
+            this.labelSigmaValueLeft.AutoSize = true;
+            this.labelSigmaValueLeft.Location = new System.Drawing.Point(153, 161);
+            this.labelSigmaValueLeft.Name = "labelSigmaValueLeft";
+            this.labelSigmaValueLeft.Size = new System.Drawing.Size(0, 13);
+            this.labelSigmaValueLeft.TabIndex = 32;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label6, 1, 6);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label8, 1, 5);
-            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label5, 1, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label16, 0, 5);
-            this.tableLayoutPanel6.Controls.Add(this.label4, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label17, 0, 6);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 7);
-            this.tableLayoutPanel6.Controls.Add(this.label10, 1, 7);
-            this.tableLayoutPanel6.Controls.Add(this.label18, 0, 8);
-            this.tableLayoutPanel6.Controls.Add(this.label19, 1, 8);
+            this.tableLayoutPanel6.Controls.Add(this.labelNameRight, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelCountRight, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.labelTupeRight, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.labelGradeValueRight, 1, 6);
+            this.tableLayoutPanel6.Controls.Add(this.labelDateRight, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.labelCommentValueRight, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.labelPlaceRight, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.labelPlaceValueRight, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.labelCommentRight, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.labelDateValueRight, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.labelGradeRight, 0, 6);
+            this.tableLayoutPanel6.Controls.Add(this.labelTypeValueRight, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.labelNameValueRight, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelCountValueRight, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.labelQualityRight, 0, 7);
+            this.tableLayoutPanel6.Controls.Add(this.labelQualityValueRight, 1, 7);
+            this.tableLayoutPanel6.Controls.Add(this.labelSigmaRight, 0, 8);
+            this.tableLayoutPanel6.Controls.Add(this.labelSigmaValueRight, 1, 8);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(257, 31);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -344,200 +344,200 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(249, 202);
             this.tableLayoutPanel6.TabIndex = 32;
             // 
-            // label11
+            // labelNameRight
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Название: ";
+            this.labelNameRight.AutoSize = true;
+            this.labelNameRight.Location = new System.Drawing.Point(3, 0);
+            this.labelNameRight.Name = "labelNameRight";
+            this.labelNameRight.Size = new System.Drawing.Size(63, 13);
+            this.labelNameRight.TabIndex = 12;
+            this.labelNameRight.Text = "Название: ";
             // 
-            // label12
+            // labelCountRight
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Количество листьев";
+            this.labelCountRight.AutoSize = true;
+            this.labelCountRight.Location = new System.Drawing.Point(3, 15);
+            this.labelCountRight.Name = "labelCountRight";
+            this.labelCountRight.Size = new System.Drawing.Size(110, 13);
+            this.labelCountRight.TabIndex = 13;
+            this.labelCountRight.Text = "Количество листьев";
             // 
-            // label13
+            // labelTupeRight
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Вид растения";
+            this.labelTupeRight.AutoSize = true;
+            this.labelTupeRight.Location = new System.Drawing.Point(3, 30);
+            this.labelTupeRight.Name = "labelTupeRight";
+            this.labelTupeRight.Size = new System.Drawing.Size(76, 13);
+            this.labelTupeRight.TabIndex = 14;
+            this.labelTupeRight.Text = "Вид растения";
             // 
-            // label6
+            // labelGradeValueRight
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(153, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 28;
+            this.labelGradeValueRight.AutoSize = true;
+            this.labelGradeValueRight.Location = new System.Drawing.Point(153, 90);
+            this.labelGradeValueRight.Name = "labelGradeValueRight";
+            this.labelGradeValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelGradeValueRight.TabIndex = 28;
             // 
-            // label14
+            // labelDateRight
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 45);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Дата сбора";
+            this.labelDateRight.AutoSize = true;
+            this.labelDateRight.Location = new System.Drawing.Point(3, 45);
+            this.labelDateRight.Name = "labelDateRight";
+            this.labelDateRight.Size = new System.Drawing.Size(66, 13);
+            this.labelDateRight.TabIndex = 15;
+            this.labelDateRight.Text = "Дата сбора";
             // 
-            // label8
+            // labelCommentValueRight
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(153, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
-            this.label8.TabIndex = 27;
+            this.labelCommentValueRight.AutoSize = true;
+            this.labelCommentValueRight.Location = new System.Drawing.Point(153, 75);
+            this.labelCommentValueRight.Name = "labelCommentValueRight";
+            this.labelCommentValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelCommentValueRight.TabIndex = 27;
             // 
-            // label15
+            // labelPlaceRight
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 60);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 13);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Место сбора";
+            this.labelPlaceRight.AutoSize = true;
+            this.labelPlaceRight.Location = new System.Drawing.Point(3, 60);
+            this.labelPlaceRight.Name = "labelPlaceRight";
+            this.labelPlaceRight.Size = new System.Drawing.Size(72, 13);
+            this.labelPlaceRight.TabIndex = 16;
+            this.labelPlaceRight.Text = "Место сбора";
             // 
-            // label5
+            // labelPlaceValueRight
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(153, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 26;
+            this.labelPlaceValueRight.AutoSize = true;
+            this.labelPlaceValueRight.Location = new System.Drawing.Point(153, 60);
+            this.labelPlaceValueRight.Name = "labelPlaceValueRight";
+            this.labelPlaceValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelPlaceValueRight.TabIndex = 26;
             // 
-            // label16
+            // labelCommentRight
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 75);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(77, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Комментарий";
+            this.labelCommentRight.AutoSize = true;
+            this.labelCommentRight.Location = new System.Drawing.Point(3, 75);
+            this.labelCommentRight.Name = "labelCommentRight";
+            this.labelCommentRight.Size = new System.Drawing.Size(77, 13);
+            this.labelCommentRight.TabIndex = 17;
+            this.labelCommentRight.Text = "Комментарий";
             // 
-            // label4
+            // labelDateValueRight
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
-            this.label4.TabIndex = 25;
+            this.labelDateValueRight.AutoSize = true;
+            this.labelDateValueRight.Location = new System.Drawing.Point(153, 45);
+            this.labelDateValueRight.Name = "labelDateValueRight";
+            this.labelDateValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelDateValueRight.TabIndex = 25;
             // 
-            // label17
+            // labelGradeRight
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 90);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(136, 26);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Степень флуктуирующей асимметрии";
+            this.labelGradeRight.AutoSize = true;
+            this.labelGradeRight.Location = new System.Drawing.Point(3, 90);
+            this.labelGradeRight.Name = "labelGradeRight";
+            this.labelGradeRight.Size = new System.Drawing.Size(136, 26);
+            this.labelGradeRight.TabIndex = 18;
+            this.labelGradeRight.Text = "Степень флуктуирующей асимметрии";
             // 
-            // label3
+            // labelTypeValueRight
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 24;
+            this.labelTypeValueRight.AutoSize = true;
+            this.labelTypeValueRight.Location = new System.Drawing.Point(153, 30);
+            this.labelTypeValueRight.Name = "labelTypeValueRight";
+            this.labelTypeValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelTypeValueRight.TabIndex = 24;
             // 
-            // label1
+            // labelNameValueRight
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 22;
+            this.labelNameValueRight.AutoSize = true;
+            this.labelNameValueRight.Location = new System.Drawing.Point(153, 0);
+            this.labelNameValueRight.Name = "labelNameValueRight";
+            this.labelNameValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelNameValueRight.TabIndex = 22;
             // 
-            // label2
+            // labelCountValueRight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 23;
+            this.labelCountValueRight.AutoSize = true;
+            this.labelCountValueRight.Location = new System.Drawing.Point(153, 15);
+            this.labelCountValueRight.Name = "labelCountValueRight";
+            this.labelCountValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelCountValueRight.TabIndex = 23;
             // 
-            // label9
+            // labelQualityRight
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 13);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Качество среды";
+            this.labelQualityRight.AutoSize = true;
+            this.labelQualityRight.Location = new System.Drawing.Point(3, 120);
+            this.labelQualityRight.Name = "labelQualityRight";
+            this.labelQualityRight.Size = new System.Drawing.Size(89, 13);
+            this.labelQualityRight.TabIndex = 29;
+            this.labelQualityRight.Text = "Качество среды";
             // 
-            // label10
+            // labelQualityValueRight
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(153, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
-            this.label10.TabIndex = 30;
+            this.labelQualityValueRight.AutoSize = true;
+            this.labelQualityValueRight.Location = new System.Drawing.Point(153, 120);
+            this.labelQualityValueRight.Name = "labelQualityValueRight";
+            this.labelQualityValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelQualityValueRight.TabIndex = 30;
             // 
-            // label18
+            // labelSigmaRight
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 161);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 26);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Среднее квадратическое отклонение σ ";
+            this.labelSigmaRight.AutoSize = true;
+            this.labelSigmaRight.Location = new System.Drawing.Point(3, 161);
+            this.labelSigmaRight.Name = "labelSigmaRight";
+            this.labelSigmaRight.Size = new System.Drawing.Size(138, 26);
+            this.labelSigmaRight.TabIndex = 31;
+            this.labelSigmaRight.Text = "Среднее квадратическое отклонение σ ";
             // 
-            // label19
+            // labelSigmaValueRight
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(153, 161);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 13);
-            this.label19.TabIndex = 32;
+            this.labelSigmaValueRight.AutoSize = true;
+            this.labelSigmaValueRight.Location = new System.Drawing.Point(153, 161);
+            this.labelSigmaValueRight.Name = "labelSigmaValueRight";
+            this.labelSigmaValueRight.Size = new System.Drawing.Size(0, 13);
+            this.labelSigmaValueRight.TabIndex = 32;
             // 
-            // comboBox2
+            // comboBoxRight
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.comboBox2.Location = new System.Drawing.Point(257, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(249, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBoxRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRight.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBoxRight.Location = new System.Drawing.Point(257, 3);
+            this.comboBoxRight.Name = "comboBoxRight";
+            this.comboBoxRight.Size = new System.Drawing.Size(249, 21);
+            this.comboBoxRight.TabIndex = 2;
+            this.comboBoxRight.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // comboBoxLeft
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(248, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLeft.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.comboBoxLeft.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxLeft.Name = "comboBoxLeft";
+            this.comboBoxLeft.Size = new System.Drawing.Size(248, 21);
+            this.comboBoxLeft.TabIndex = 1;
+            this.comboBoxLeft.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // buttonRun
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(509, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Расчёт";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRun.Location = new System.Drawing.Point(3, 289);
+            this.buttonRun.Name = "buttonRun";
+            this.buttonRun.Size = new System.Drawing.Size(509, 37);
+            this.buttonRun.TabIndex = 1;
+            this.buttonRun.Text = "Расчёт";
+            this.buttonRun.UseVisualStyleBackColor = true;
+            this.buttonRun.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label37
+            // labelResult
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(3, 242);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(41, 13);
-            this.label37.TabIndex = 2;
-            this.label37.Text = "label37";
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(3, 242);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(41, 13);
+            this.labelResult.TabIndex = 2;
+            this.labelResult.Text = "label37";
             // 
             // Form6
             // 
@@ -562,48 +562,48 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxRight;
+        private System.Windows.Forms.ComboBox comboBoxLeft;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label labelNameLeft;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label labelType;
+        private System.Windows.Forms.Label labelGradeValueLeft;
+        private System.Windows.Forms.Label labelDateLeft;
+        private System.Windows.Forms.Label labelCommentValueLeft;
+        private System.Windows.Forms.Label labelPlaceLeft;
+        private System.Windows.Forms.Label labelPlaceValueLeft;
+        private System.Windows.Forms.Label labelCommentLeft;
+        private System.Windows.Forms.Label labelDateValueLeft;
+        private System.Windows.Forms.Label labelGradeLeft;
+        private System.Windows.Forms.Label labelTypeValueLeft;
+        private System.Windows.Forms.Label labelNameValueLeft;
+        private System.Windows.Forms.Label labelCountValueLeft;
+        private System.Windows.Forms.Label labelQualityLeft;
+        private System.Windows.Forms.Label labelQualityValueLeft;
+        private System.Windows.Forms.Label labelSigmaLeft;
+        private System.Windows.Forms.Label labelSigmaValueLeft;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label labelNameRight;
+        private System.Windows.Forms.Label labelCountRight;
+        private System.Windows.Forms.Label labelTupeRight;
+        private System.Windows.Forms.Label labelGradeValueRight;
+        private System.Windows.Forms.Label labelDateRight;
+        private System.Windows.Forms.Label labelCommentValueRight;
+        private System.Windows.Forms.Label labelPlaceRight;
+        private System.Windows.Forms.Label labelPlaceValueRight;
+        private System.Windows.Forms.Label labelCommentRight;
+        private System.Windows.Forms.Label labelDateValueRight;
+        private System.Windows.Forms.Label labelGradeRight;
+        private System.Windows.Forms.Label labelTypeValueRight;
+        private System.Windows.Forms.Label labelNameValueRight;
+        private System.Windows.Forms.Label labelCountValueRight;
+        private System.Windows.Forms.Label labelQualityRight;
+        private System.Windows.Forms.Label labelQualityValueRight;
+        private System.Windows.Forms.Label labelSigmaRight;
+        private System.Windows.Forms.Label labelSigmaValueRight;
+        private System.Windows.Forms.Button buttonRun;
+        private System.Windows.Forms.Label labelResult;
 
     }
 }

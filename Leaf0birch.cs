@@ -182,6 +182,8 @@ namespace WindowsFormsApplication1
             g.DrawLine(pen1, p.p9, p.p10);
             g.DrawLine(pen1, p.p10, p.p6);
             g.Dispose();
+            g = null;
+            GC.Collect();
 
                                    
         }
@@ -189,8 +191,8 @@ namespace WindowsFormsApplication1
         //прорисовка линий по клику мышью
         public override bool draw(Image image, int pnum, MouseEventArgs e)
         {
-            Graphics g = Graphics.FromImage(image);                    
-            g.DrawRectangle(pen1, e.Location.X - 2, e.Location.Y - 2, 4, 4);
+            Graphics gr = Graphics.FromImage(image);                    
+            gr.DrawRectangle(pen1, e.Location.X - 2, e.Location.Y - 2, 4, 4);
             switch (pnum)
             {
                 case 0:
@@ -198,56 +200,60 @@ namespace WindowsFormsApplication1
                     break;
                 case 1:
                     p.p1 = e.Location;
-                    g.DrawLine(pen, p.p0, p.p1);
+                    gr.DrawLine(pen, p.p0, p.p1);
                     break;
                 case 2:
                     p.p2 = e.Location;
-                    g.DrawLine(pen, p.p1, p.p2);
+                    gr.DrawLine(pen, p.p1, p.p2);
                     CentrLine(image, image.Size.Width, image.Size.Height);
-                    g.DrawLine(pen1, p.x0, p.h, p.x2, p.h);
+                    gr.DrawLine(pen1, p.x0, p.h, p.x2, p.h);
                     if (p.h < p.p1.Y)
                         p.x1 = Crossing(p.p0, p.p1, new System.Drawing.Point(p.x0, p.h), new System.Drawing.Point(p.x2, p.h));
                     else
                         p.x1 = Crossing(p.p1, p.p2, new System.Drawing.Point(p.x0, p.h), new System.Drawing.Point(p.x2, p.h));
-                    g.DrawRectangle(pen, p.x1 - 2, p.h - 2, 4, 4);
+                    gr.DrawRectangle(pen, p.x1 - 2, p.h - 2, 4, 4);
                     break;
                 case 3:
                     p.p3 = e.Location;
                     break;
                 case 4:
                     p.p4 = e.Location;
-                    g.DrawLine(pen, p.p3, p.p4);
+                    gr.DrawLine(pen, p.p3, p.p4);
                     break;
                 case 5:
                     p.p5 = e.Location;
                     break;
                 case 6:
                     p.p6 = e.Location;
-                    g.DrawLine(pen, p.p5, p.p6);
+                    gr.DrawLine(pen, p.p5, p.p6);
                     break;
                 case 7:
                     p.p7 = e.Location;
-                    g.DrawLine(pen1, p.p7, p.p3);
+                    gr.DrawLine(pen1, p.p7, p.p3);
                     break;
                 case 8:
                     p.p8 = e.Location;
-                    g.DrawLine(pen1, p.p7, p.p8);
-                    g.DrawLine(pen1, p.p8, p.p4);
+                    gr.DrawLine(pen1, p.p7, p.p8);
+                    gr.DrawLine(pen1, p.p8, p.p4);
                     break;
                 case 9:
                     p.p9 = e.Location;
-                    g.DrawLine(pen1, p.p9, p.p5);
+                    gr.DrawLine(pen1, p.p9, p.p5);
                     break;
                 case 10:
                     p.p10 = e.Location;
-                    g.DrawLine(pen1, p.p9, p.p10);
-                    g.DrawLine(pen1, p.p10, p.p6);
-                    g.Dispose();
+                    gr.DrawLine(pen1, p.p9, p.p10);
+                    gr.DrawLine(pen1, p.p10, p.p6);
+                    gr.Dispose();
+                    gr = null;
+                    GC.Collect();
                     return false;
                 default:
                     return false;
             }
-            g.Dispose();
+            gr.Dispose();
+            gr = null;
+            GC.Collect();
             return true;
         }
 

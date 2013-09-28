@@ -30,24 +30,24 @@ namespace WindowsFormsApplication1
                 .Where("id = " + Data.sel);
             
             Dictionary<string, object> item = Data.bd.FetchOneRow(select);
-            textBox1.Text = item["name"].ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(item["date"]);
-            textBox2.Text = item["place"].ToString();
-            textBox3.Text = item["user"].ToString();
-            comboBox1.SelectedIndex = Convert.ToInt32(item["typeofleaf_id"]);
-            textBox4.Text = item["comment"].ToString();      
+            textBoxName.Text = item["name"].ToString();
+            dateTimePickerDate.Value = Convert.ToDateTime(item["date"]);
+            textBoxPlace.Text = item["place"].ToString();
+            textBoxAuthor.Text = item["user"].ToString();
+            comboBoxType.SelectedIndex = Convert.ToInt32(item["typeofleaf_id"]);
+            textBoxComment.Text = item["comment"].ToString();      
             
         }
 
         //Применить
         private void button2_Click(object sender, EventArgs e)
         {
-            name = textBox1.Text;
-            place = textBox2.Text;
-            user = textBox3.Text;
-            date = dateTimePicker1.Value;
-            type = comboBox1.SelectedIndex;
-            comment = textBox4.Text;
+            name = textBoxName.Text;
+            place = textBoxPlace.Text;
+            user = textBoxAuthor.Text;
+            date = dateTimePickerDate.Value;
+            type = comboBoxType.SelectedIndex;
+            comment = textBoxComment.Text;
 
             ParametersCollection parametr = new ParametersCollection();
             parametr.Add("name", name, DbType.String);
