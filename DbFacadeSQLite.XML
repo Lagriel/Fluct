@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbFacadeSQLite</name>
+    </assembly>
+    <members>
+        <member name="T:DatabaseLib.DbFacadeSQLite">
+            <summary>
+            Библиотека удобного доступа к базе данных. Класс содержит заготовки для получения, удаления, обновления и вставки данных.
+            </summary>
+        </member>
+        <member name="F:DatabaseLib.DbFacadeSQLite.ConnectionString">
+            <summary>
+            Путь к файлу базы данных.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.#ctor(System.String)">
+            <summary>
+            Инициализация подключения.
+            </summary>
+            <param name="fileName">Путь к файлу базы данных</param>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.#ctor(System.String,System.String)">
+            <summary>
+            Инициализация подключения.
+            </summary>
+            <param name="fileName">Путь к файлу базы данных</param>
+            <param name="password">Пароль</param>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.#ctor(System.Data.SQLite.SQLiteConnectionStringBuilder)">
+            <summary>
+            Инициализация подключения.
+            </summary>
+            <param name="csb"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DatabaseLib.DbFacadeSQLite.TableInfo(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:DatabaseLib.DbFacadeSQLite.GetTables" -->
+        <!-- Badly formed XML comment ignored for member "M:DatabaseLib.DbFacadeSQLite.GetAllTables" -->
+        <member name="M:DatabaseLib.DbFacadeSQLite.Vacuum">
+            <summary>
+            Сжать базу данных.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.ClearLastQuery">
+            <summary>
+            Очистка последнего запроса.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.ClearLastError">
+            <summary>
+            Очистка последней ошибки.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.ChangePassword(System.String)">
+            <summary>
+            Изменение пароля для базы данных.
+            </summary>
+            <param name="password">Пароль</param>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.GetConnectionState">
+            <summary>
+            Получить текущее состояние подключения.
+            </summary>
+            <returns>Текущее состояние подключения</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Open">
+            <summary>
+            Открытие подключения.
+            </summary>
+            <returns>True если все прошло успешно</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Close">
+            <summary>
+            Закрытие подключения.
+            </summary>
+            <returns>True если все прошло успешно</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.BeginTransaction">
+            <summary>
+            Начать транзакцию.
+            Соединение открывается, если оно не было открыто ранее.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.CommitTransaction">
+            <summary>
+            Принять транзакцию. Соединение не закрывается.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.RollBackTransaction">
+            <summary>
+            Отменить транзакцию. Соединение не закрывается.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.ExecuteNonQuery(System.String)">
+            <summary>
+            Выполняет запрос к базе данных.
+            </summary>
+            <param name="query">Строка запроса</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.ExecuteNonQuery(System.Object[])">
+            <summary>
+            Выполняет запрос к базе данных.
+            </summary>
+            <param name="queries">Массив запросов</param>
+            <returns>Код ошибки. Если 0 - ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchAll(System.String)">
+            <summary>
+            Получает данные из таблицы.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchAll(System.String,System.String)">
+            <summary>
+            Получает данные из таблицы.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchAll(System.String,System.String,System.String)">
+            <summary>
+            Получает данные из таблицы.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="etc">Остальные параметры: сортировка, группировка и т.д.</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String[])">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String)">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String[],System.String)">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String,System.String)">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String[],System.String,System.String)">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="etc">Остальные параметры: сортировка, группировка и т.д.</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchByColumn(System.String,System.String,System.String,System.String)">
+            <summary>
+            Получение данных по выбранным полям (колонкам).
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="etc">Остальные параметры: сортировка, группировка и т.д.</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Execute(DatabaseLib.Select)">
+            <summary>
+            Выполняет запрос, созданный с помощью конструктора класса Select.
+            </summary>
+            <param name="select">Объект запроса</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Execute(DatabaseLib.Select,DatabaseLib.ParametersCollection)">
+            <summary>
+            Выполняет запрос, созданный с помощью конструктора класса Select.
+            </summary>
+            <param name="query">Объект запроса</param>
+            <param name="parameters">Коллекция параметров</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Execute(System.String,DatabaseLib.ParametersCollection)">
+            <summary>
+            Выполняет переданный запрос в виде строки.
+            </summary>
+            <param name="query">Строка запроса</param>
+            <param name="parameters">Коллекция параметров</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Execute(System.String)">
+            <summary>
+            Выполняет переданный запрос в виде строки.
+            </summary>
+            <param name="query">Строка запроса</param>
+            <returns>Таблица с данными</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String[])">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String[],System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String,System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String[],System.String,System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Массив колонок, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="etc">Остальные параметры: сортировка, группировка и т.д.</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,System.String,System.String,System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Строка колонок через запятую, которые необходимо получить</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="etc">Остальные параметры: сортировка, группировка и т.д.</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(DatabaseLib.Select)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="select">Объект Select</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(DatabaseLib.Select,DatabaseLib.ParametersCollection)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="select">Объект Select</param>
+            <param name="parameters">Коллекция параметров</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String,DatabaseLib.ParametersCollection)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="query">Строка запроса</param>
+            <param name="parameter">Коллекция параметров</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.FetchOneRow(System.String)">
+            <summary>
+            Вернуть первую строку из полученных данных.
+            </summary>
+            <param name="query">Строка запроса</param>
+            <returns>Ассоциативный массив</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Insert(System.String,DatabaseLib.ParametersCollection)">
+            <summary>
+            Вставляет данные в таблицу.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="parameters">Коллекция параметров</param>
+            <returns>ID последней вставленной строки</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.InsertMany(System.String,DatabaseLib.ParametersCollection[])">
+            <summary>
+            Вставляет несколько записей в таблицу.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="parametersCollection">Массив параметров/записей</param>
+            <returns>Возвращает 0, если удачно</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Delete(System.String)">
+            <summary>
+            Удаляет все данные из выбранной таблицы.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Delete(System.String,System.String,DatabaseLib.ParametersCollection)">
+            <summary>
+            Удаляет все данные по условию.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <param name="parameters">Список параметров</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Delete(System.String,System.String)">
+            <summary>
+            Удаляет все данные по условию.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="where">Строка условий, начинающихся с WHERE</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Delete(System.String,System.String,System.Object[])">
+            <summary>
+            Удаляет данные из таблицы с массивом условий.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="column">Название поля</param>
+            <param name="collection">Массив объектов с условием</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Update(System.String,DatabaseLib.ParametersCollection,System.String)">
+            <summary>
+            Перезаписывает данные в выбранной таблице.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="collection">Коллекция полей и значений</param>
+            <param name="where">Строка условия</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.Update(System.String,DatabaseLib.ParametersCollection,System.Object[],System.String)">
+            <summary>
+            Перезаписывает данные в выбранной таблице.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="collection">Коллекция полей и значений</param>
+            <param name="whereparams">Набор условий</param>
+            <param name="whereseparator">Разделитель между условиями OR или AND</param>
+            <returns>Код ошибки. Если 0, ошибки нет</returns>
+        </member>
+        <member name="M:DatabaseLib.DbFacadeSQLite.columnsToLine(System.String[])">
+            <summary>
+            Массив колонок в строку.
+            </summary>
+            <param name="columns">Массив колонок</param>
+            <returns>Колонки через запятую</returns>
+        </member>
+        <member name="P:DatabaseLib.DbFacadeSQLite.LastQuery">
+            <summary>
+            Последний выполненный запрос.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.DbFacadeSQLite.LastError">
+            <summary>
+            Последняя ошибка.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.DbFacadeSQLite.Filename">
+            <summary>
+            Имя файла базы данных.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.DbFacadeSQLite.Version">
+            <summary>
+            Версия SQLite.
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.DbFacadeSQLite.ToLowerCase">
+            <summary>
+            Перевод в нижний регистр
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.DbFacadeSQLite.ToUpperCase">
+            <summary>
+            Перевод в верхний регистр
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.DbFacadeSQLite.DateNow">
+            <summary>
+            Текущая дата
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.DbFacadeSQLite.DateTimeNow">
+            <summary>
+            Текущая дата и время
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.Parameter">
+            <summary>
+            Класс параметра, для передачи конструктору запроса.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Parameter.Value">
+            <summary>
+            Значение поля.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Parameter.ColumnName">
+            <summary>
+            Название поля в базе данных.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Parameter.DbType">
+            <summary>
+            Тип значения.
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.ParametersCollection">
+            <summary>
+            Коллекция параметров.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.ParametersCollection.Add(DatabaseLib.Parameter)">
+            <summary>
+            Добавляет параметры в коллекцию.
+            </summary>
+            <param name="iparam">Параметр</param>
+        </member>
+        <member name="M:DatabaseLib.ParametersCollection.Add(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            Добавляет параметр в коллекцию.
+            </summary>
+            <param name="columnName">Имя поля/колонки</param>
+            <param name="value">Значение</param>
+            <param name="dbType">Тип значения</param>
+        </member>
+        <member name="P:DatabaseLib.ParametersCollection.Item(System.Int32)">
+            <summary>
+            Возвращает элемент по индексу.
+            </summary>
+            <param name="Index">Индекс</param>
+            <returns>Параметр, для передачи конструктору запроса</returns>
+        </member>
+        <member name="T:DatabaseLib.ExceptionWarning">
+            <summary>
+            Класс исключения для проверки строки запроса для базы данных.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.ExceptionWarning.#ctor(System.String)">
+            <summary>
+            Текст сообщения об ошибке.
+            </summary>
+            <param name="messagetext">Сообщение об ошибке</param>
+        </member>
+        <member name="P:DatabaseLib.ExceptionWarning.MessageText">
+            <summary>
+            Текст сообщения об ошибке.
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.SQLJoinTypes">
+            <summary>
+            Типы связывания таблиц между собой.
+            </summary>
+        </member>
+        <member name="T:DatabaseLib.Select">
+            <summary>
+            Класс для создания строки запроса. Работает как конструктор запроса.
+            </summary>
+        </member>
+        <member name="M:DatabaseLib.Select.ToString">
+            <summary>
+            Строка запроса.
+            </summary>
+            <returns>Тест запроса к базе данных</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.From(System.String)">
+            <summary>
+            Задает имя таблицы.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.From(System.String,System.String[])">
+            <summary>
+            Задает имя таблицы и возвращаемые поля.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Поля, которые нужно получить</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.From(System.String,System.String)">
+            <summary>
+            Задает имя таблицы и возвращаемые поля.
+            </summary>
+            <param name="tablename">Имя таблицы</param>
+            <param name="columns">Поля, которые нужно получить</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Columns(System.String[])">
+            <summary>
+            Задает список полей, которые будут возвращены
+            </summary>
+            <param name="columns">Поля, которые нужно получить</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Columns(System.String)">
+            <summary>
+            Задает список полей, которые будут возвращены
+            </summary>
+            <param name="columns">Поля, которые нужно получить</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Where(System.String)">
+            <summary>
+            Условия.
+            </summary>
+            <param name="where">Перечисление условий без WHERE</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Join(System.String,System.String,DatabaseLib.SQLJoinTypes)">
+            <summary>
+            Связывание таблиц.
+            </summary>
+            <param name="name">Имя таблицы с которой связываемся</param>
+            <param name="conditional">Условия связывания</param>
+            <param name="type">Тип связывания</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Group(System.String)">
+            <summary>
+            Группировка.
+            </summary>
+            <param name="group">Поле или поля через запятую для группировки</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Having(System.String)">
+            <summary>
+            Вычисление табличного выражения.
+            </summary>
+            <param name="having">Условие</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Order(System.String)">
+            <summary>
+            Порядок сортировки.
+            </summary>
+            <param name="order">Поле для группировки</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Limit(System.Int32)">
+            <summary>
+            Лимит на выборку.
+            </summary>
+            <param name="count">Количество записей</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.Limit(System.Int32,System.Int32)">
+            <summary>
+            Лимит на выборку.
+            </summary>
+            <param name="count">Минимальное количество записей</param>
+            <param name="offset">Максимальное количество записей</param>
+            <returns>Объект для создания строки запроса</returns>
+        </member>
+        <member name="M:DatabaseLib.Select._constructor">
+            <summary>
+            Конструктор запроса.
+            </summary>
+            <returns>Строка запроса к базе данных</returns>
+        </member>
+        <member name="M:DatabaseLib.Select.columnsToLine(System.String[])">
+            <summary>
+            Массив колонок в строку
+            </summary>
+            <param name="columns">Массив колонок</param>
+            <returns>Колонки через запятую</returns>
+        </member>
+        <member name="P:DatabaseLib.Select.SelectCommand">
+            <summary>
+            Строка запроса.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Select.LastError">
+            <summary>
+            Последняя ошибка.
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Select.JoinObj.Conditional">
+            <summary>
+            Условное выражение
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Select.JoinObj.Name">
+            <summary>
+            Имя таблицы
+            </summary>
+        </member>
+        <member name="P:DatabaseLib.Select.JoinObj.SQLJoinType">
+            <summary>
+            Тип связывания
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,104 @@
+K:\Универ\Научная\Lists\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+K:\Универ\Научная\Lists\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+K:\Универ\Научная\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+K:\Универ\Научная\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.dll
+K:\Универ\Научная\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.Linq.dll
+K:\Универ\Научная\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.xml
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.dll
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.Linq.dll
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.xml
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+K:\Универ\Научная\II\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.dll
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.Linq.dll
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.xml
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+K:\Универ\Научная\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.xml
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form4.resources
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.dll
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.Linq.dll
+F:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
+F:\III\Lists\WindowsFormsApplication1\bin\Debug\libxl.net.dll
+g:\!\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+g:\!\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+g:\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.exe
+g:\III\Lists\WindowsFormsApplication1\bin\Debug\Анализатор флуктуирующей асимметрии v0.3-alpfa.pdb
+g:\III\Lists\WindowsFormsApplication1\bin\Debug\libxl.net.dll
+g:\III\Lists\WindowsFormsApplication1\bin\Debug\System.Data.SQLite.xml
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form4.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+g:\III\Lists\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+g:\IV\3. Исходный код\bin\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe
+g:\IV\3. Исходный код\bin\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.pdb
+g:\IV\3. Исходный код\bin\Debug\libxl.net.dll
+g:\IV\3. Исходный код\bin\Debug\System.Data.SQLite.xml
+g:\IV\3. Исходный код\obj\Debug\ResolveAssemblyReference.cache
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Form1.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Form2.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Form3.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Form4.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Form5.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+g:\IV\3. Исходный код\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+g:\IV\3. Исходный код\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe
+g:\IV\3. Исходный код\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.pdb
+K:\Универ\Научная\IV\3. Исходный код\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe
+K:\Универ\Научная\IV\3. Исходный код\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.pdb
+K:\Универ\Научная\5\bin\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe.config
+K:\Универ\Научная\5\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe
+K:\Универ\Научная\5\obj\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.pdb
+K:\Универ\Научная\5\bin\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.exe
+K:\Универ\Научная\5\bin\Debug\Анализатор флуктуирующей асимметрии v0.4-alpfa.pdb
+K:\Универ\Научная\5\bin\Debug\libxl.net.dll
+K:\Универ\Научная\5\bin\Debug\System.Data.SQLite.dll
+K:\Универ\Научная\5\bin\Debug\System.Data.SQLite.Linq.dll
+K:\Универ\Научная\5\bin\Debug\System.Data.SQLite.xml
+K:\Универ\Научная\5\obj\Debug\ResolveAssemblyReference.cache
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form1.resources
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form2.resources
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form3.resources
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form4.resources
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form5.resources
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+K:\Универ\Научная\5\obj\Debug\GenerateResource.read.1.tlog
+K:\Универ\Научная\5\obj\Debug\GenerateResource.write.1.tlog
+K:\Универ\Научная\5\obj\Debug\WindowsFormsApplication1.Form6.resources

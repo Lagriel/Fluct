@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WindowsFormsApplication1">
+</Property><Property Name="Файл решения" Value="K:\Универ\Научная\5\WindowsFormsApplication1.sln">
+</Property><Property Name="Date" Value="21 сентября 2013 г.">
+</Property><Property Name="Time" Value="15:58">
+</Property></Properties><Event ErrorLevel="0" Project="WindowsFormsApplication1" Source="WindowsFormsApplication1.csproj" Description="Проект успешно преобразован">
+</Event><Event ErrorLevel="3" Project="WindowsFormsApplication1" Source="WindowsFormsApplication1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WindowsFormsApplication1.sln" Description="Преобразование решения успешно завершено">
+</Event><Event ErrorLevel="3" Project="" Source="WindowsFormsApplication1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WindowsFormsApplication1" Source="WindowsFormsApplication1.csproj" Description="Сканирование завершено: обновление для файлов проекта не требуется.">
+</Event></UpgradeLog>
