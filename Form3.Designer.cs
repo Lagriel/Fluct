@@ -44,6 +44,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +215,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(303, 281);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "K:\\Универ\\Научная\\5\\Help.chm";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,5 +252,6 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

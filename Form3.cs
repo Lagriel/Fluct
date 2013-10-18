@@ -20,6 +20,10 @@ namespace WindowsFormsApplication1
         public Form3()
         {
             InitializeComponent();
+            InitializeComponent();
+            helpProvider1.SetHelpKeyword(this, "page_10.html");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
+            helpProvider1.SetShowHelp(this, true);
         }
 
         private void button2_Click(object sender, EventArgs e)

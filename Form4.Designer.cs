@@ -44,6 +44,7 @@
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.labelComment = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +215,10 @@
             this.labelComment.TabIndex = 7;
             this.labelComment.Text = "Комментарий";
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "K:\\Универ\\Научная\\5\\Help.chm";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +251,6 @@
         private System.Windows.Forms.TextBox textBoxComment;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.Label labelComment;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

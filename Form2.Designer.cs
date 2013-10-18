@@ -55,6 +55,7 @@
             this.labelFluctValue = new System.Windows.Forms.Label();
             this.labelCommentName = new System.Windows.Forms.Label();
             this.textBoxComment = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -365,6 +366,10 @@
             this.textBoxComment.Size = new System.Drawing.Size(425, 88);
             this.textBoxComment.TabIndex = 0;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "K:\\Универ\\Научная\\5\\Help.chm";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,5 +422,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAll;
         private System.Windows.Forms.Label labelCommentName;
         private System.Windows.Forms.TextBox textBoxComment;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

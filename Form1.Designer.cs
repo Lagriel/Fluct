@@ -79,6 +79,7 @@
             this.ColumnGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.menuStrip1.SuspendLayout();
             this.groupBoxSel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -175,12 +176,14 @@
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // groupBoxSel
             // 
@@ -612,6 +615,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 610);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "K:\\Универ\\Научная\\5\\Help.chm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,6 +701,7 @@
         private System.Windows.Forms.Label labelSigma;
         private System.Windows.Forms.Label labelSigmaValue;
         private System.Windows.Forms.ToolStripMenuItem сравнениеToolStripMenuItem;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

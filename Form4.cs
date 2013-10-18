@@ -21,7 +21,10 @@ namespace WindowsFormsApplication1
         public Form4()
         {
             InitializeComponent();
-
+            InitializeComponent();
+            helpProvider1.SetHelpKeyword(this, "page_10.html");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
+            helpProvider1.SetShowHelp(this, true);
             Data.bd = new DbFacadeSQLite(Data.sPath);
 
             Select select = new Select()

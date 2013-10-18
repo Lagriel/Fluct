@@ -16,6 +16,9 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+            helpProvider1.SetHelpKeyword(this, "page_6.html");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
+            helpProvider1.SetShowHelp(this, true);
         }
         
 
@@ -141,9 +144,9 @@ namespace WindowsFormsApplication1
             DataTable dt = Data.bd.Execute("SELECT id, grade, comment FROM leaf WHERE sel_id = "+ Data.sel.ToString());
             foreach (DataRow row in dt.Rows)
             {                               
-                dataGridViewLeafs.Rows.Add(row["id"].ToString(), row["grade"], row["comment"]);
+                dataGridViewLeafs.Rows.Add(row["id"].ToString(), Math.Round((double)row["grade"],4), row["comment"]);
             }
-            labelGradeValue.Text = fa(Data.sel).ToString();            
+            labelGradeValue.Text = Math.Round(fa(Data.sel),4).ToString();            
             buttonRemoveLeaf.Enabled = ((dataGridViewLeafs.Rows.Count > 0) ? true : false);
             UpdateAboutSel();
         }
@@ -188,7 +191,8 @@ namespace WindowsFormsApplication1
             try
             {
                 labelQualityValue.Text =  Data.qualityText((double)item["grade"]);
-                labelSigmaValue.Text = item["deviation"].ToString();
+                labelSigmaValue.Text = Math.Round((double)item["deviation"],4).ToString();
+                labelGradeValue.Text += " ± " + Math.Round(Math.Pow((double)item["deviation"], 2),4).ToString();
             }
             catch (Exception ex)
             { }
@@ -250,11 +254,6 @@ namespace WindowsFormsApplication1
 
             return (grade);
 
-            
-
-
-
-
         }
 
 
@@ -310,6 +309,16 @@ namespace WindowsFormsApplication1
             //buttonRemoveLeaf.Enabled = false;
             //buttonRemoveSel.Enabled = false;            
             отчётыToolStripMenuItem.Enabled = false;
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Анализатор флуктуирующей ассимметрии.\nВерсия 0.4-альфа. \n© Кароза Антон. \n+375336715354\nyaAHTOH@ya.ru\n2013.", "О программе.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
         
 

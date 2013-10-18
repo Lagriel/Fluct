@@ -25,6 +25,10 @@ namespace WindowsFormsApplication1
         public Form2()
         {
             InitializeComponent();
+            InitializeComponent();
+            helpProvider1.SetHelpKeyword(this, "page_11.html");
+            helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
+            helpProvider1.SetShowHelp(this, true);
             //leaf = new Leaf0birch();
             switch (Data.type)
             {
