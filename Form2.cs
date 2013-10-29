@@ -24,8 +24,7 @@ namespace WindowsFormsApplication1
         bool active = false;       
         public Form2()
         {
-            InitializeComponent();
-            InitializeComponent();
+            InitializeComponent();            
             helpProvider1.SetHelpKeyword(this, "page_11.html");
             helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             helpProvider1.SetShowHelp(this, true);
@@ -108,13 +107,49 @@ namespace WindowsFormsApplication1
         {
             Bitmap result = new Bitmap(nWidth, nHeight);            
             using (Graphics g = Graphics.FromImage((Image)result))
-            {                
+            {
                 g.DrawImage(b, 0, 0, nWidth, nHeight);
+
+                int firstR = 0;
+                int firstG = 0;
+                int firstB = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        firstR += result.GetPixel(i, j).R;
+                        firstG += result.GetPixel(i, j).G;
+                        firstB += result.GetPixel(i, j).B;
+                    }
+                }
+                firstR /= 100; firstR -= 10;
+                firstG /= 100; firstR -= 10;
+                firstB /= 100; firstR -= 10;
+
+                int endR = 0;
+                int endG = 0;
+                int endB = 0;
+                for (int i = nWidth-1; i > nWidth - 10; i--)
+                {
+                    for (int j = nHeight-1; j > nHeight - 10; j--)
+                    {
+                        endR += result.GetPixel(i, j).R;
+                        endG += result.GetPixel(i, j).G;
+                        endB += result.GetPixel(i, j).B;
+                    }
+                }
+                endR /= 100; endR -= 10;
+                endG /= 100; endR -= 10;
+                endB /= 100; endR -= 10;
+
                 for (int i = 0; i < nWidth; i++)
                 {
                     for (int j = 0; j < nHeight; j++)
                     {
-                        if ((result.GetPixel(i,j).G+result.GetPixel(i,j).R+result.GetPixel(i,j).B)>500)
+                        //if ((result.GetPixel(i,j).G+result.GetPixel(i,j).R+result.GetPixel(i,j).B)>500)
+                        if ((result.GetPixel(i, j).G > firstG) && (result.GetPixel(i, j).R > firstR) && (result.GetPixel(i, j).B > firstB)
+                            ||
+                            (result.GetPixel(i, j).G > endG) && (result.GetPixel(i, j).R > endR) && (result.GetPixel(i, j).B > endB))
                         {
                             result.SetPixel(i,j,Color.Transparent);
                         }

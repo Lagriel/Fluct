@@ -20,8 +20,7 @@ namespace WindowsFormsApplication1
     
         public Form4()
         {
-            InitializeComponent();
-            InitializeComponent();
+            InitializeComponent();            
             helpProvider1.SetHelpKeyword(this, "page_10.html");
             helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             helpProvider1.SetShowHelp(this, true);

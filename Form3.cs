@@ -19,8 +19,7 @@ namespace WindowsFormsApplication1
         string comment;
         public Form3()
         {
-            InitializeComponent();
-            InitializeComponent();
+            InitializeComponent();            
             helpProvider1.SetHelpKeyword(this, "page_10.html");
             helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             helpProvider1.SetShowHelp(this, true);

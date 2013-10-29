@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1
             {                               
                 dataGridViewLeafs.Rows.Add(row["id"].ToString(), Math.Round((double)row["grade"],4), row["comment"]);
             }
-            labelGradeValue.Text = Math.Round(fa(Data.sel),4).ToString();            
+            labelGradeValue.Text = Math.Round(fa(Data.sel),5).ToString();            
             buttonRemoveLeaf.Enabled = ((dataGridViewLeafs.Rows.Count > 0) ? true : false);
             UpdateAboutSel();
         }
@@ -192,7 +192,7 @@ namespace WindowsFormsApplication1
             {
                 labelQualityValue.Text =  Data.qualityText((double)item["grade"]);
                 labelSigmaValue.Text = Math.Round((double)item["deviation"],4).ToString();
-                labelGradeValue.Text += " ± " + Math.Round(Math.Pow((double)item["deviation"], 2),4).ToString();
+                labelGradeValue.Text += " ± " + Math.Round(Math.Pow((double)item["deviation"], 2),5).ToString();
             }
             catch (Exception ex)
             { }
