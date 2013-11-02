@@ -187,7 +187,17 @@ namespace WindowsFormsApplication1
         {            
             if (active)
             {                
-                labelHint.Text = leaf.getHint(pnum+2);
+                labelHint.Text = leaf.getHint(pnum+2);                                                
+
+                if (pnum == 2)
+                {
+                    leaf.setP2(new Point(e.X,e.Y));                 
+                    leaf.rotateImage();
+                    pictureBox1.Image.Dispose();
+                    pictureBox1.Image = null;
+                    GC.Collect();
+                    pictureBox1.Image = new Bitmap((Bitmap)leaf.img.Clone());
+                }
                 if (leaf.draw(pictureBox1.Image, pnum, e))
                 { 
                     buttonOpenImage.Enabled = false;
@@ -200,8 +210,9 @@ namespace WindowsFormsApplication1
                     labelFluctValue.Text = leaf.assim(dataGridView1).ToString();
                     tabControl1.SelectTab(1);             
                 }
+
                 pictureBox1.Invalidate();
-                pnum++;
+                pnum++;                
                 pictureBox1.Refresh();                       
             }            
         }
@@ -244,7 +255,7 @@ namespace WindowsFormsApplication1
             pictureBox1.Image.Dispose();
             pictureBox1.Image = null;
             GC.Collect();         
-            pictureBox1.Image = new Bitmap((Bitmap)leaf.img.Clone());            
+            pictureBox1.Image = new Bitmap((Bitmap)leaf.img.Clone());
             dataGridView1.Rows.Clear();
             pictureBox1.Refresh();
         }

@@ -40,6 +40,24 @@ namespace WindowsFormsApplication1
 
         public abstract double assim (DataGridView q);
 
+        public abstract void rotateImage();
+
+        public abstract void setP2(System.Drawing.Point p);
+        
+
+        public void rotateImage(ref Point p0, ref Point p1, ref Point p2)
+        {
+            double angle = Math.Atan2(((double)p2.X - (double)p0.X) , ((double)p2.Y - (double)p0.Y));
+            p0 = new Point((int)(p1.X + (p0.X - p1.X) * Math.Cos(angle) - (p0.Y - p1.Y) * Math.Sin(angle)), (int)(p1.Y + (p0.Y - p1.Y) * Math.Cos(angle) + (p0.X - p1.X) * Math.Sin(angle)));
+            p2 = new Point((int)(p1.X + (p2.X - p1.X) * Math.Cos(angle) - (p2.Y - p1.Y) * Math.Sin(angle)), (int)(p1.Y + (p2.Y - p1.Y) * Math.Cos(angle) + (p2.X - p1.X) * Math.Sin(angle)));
+            Bitmap returnBitmap = new Bitmap(img.Width, img.Height);
+            Graphics g = Graphics.FromImage(returnBitmap);
+            g.TranslateTransform(p1.X, p1.Y);
+            g.RotateTransform(Convert.ToSingle(angle*(180/Math.PI)));
+            g.TranslateTransform(-p1.X, -p1.Y);
+            g.DrawImage(img, new Point(0, 0));
+            img = returnBitmap;
+        }
       
         
 //        public struct Params

@@ -188,13 +188,25 @@ namespace WindowsFormsApplication1
                                    
         }
 
+        public override void rotateImage()
+        {
+            rotateImage(ref p.p0, ref p.p1, ref p.p2); 
+        }
+
+        public override void setP2(System.Drawing.Point p)
+        {
+            this.p.p2 = p;
+        }
+
         //прорисовка линий по клику мышью
         public override bool draw(Image image, int pnum, MouseEventArgs e)
         {
-            Graphics gr = Graphics.FromImage(image);                    
-            gr.DrawRectangle(pen1, e.Location.X - 2, e.Location.Y - 2, 4, 4);
+            
+            
+            Graphics gr = Graphics.FromImage(image);
+            if (pnum != 2) gr.DrawRectangle(pen1, e.Location.X - 2, e.Location.Y - 2, 4, 4);
             switch (pnum)
-            {
+            {                
                 case 0:
                     p.p0 = e.Location;
                     break;
@@ -202,9 +214,14 @@ namespace WindowsFormsApplication1
                     p.p1 = e.Location;
                     gr.DrawLine(pen, p.p0, p.p1);
                     break;
-                case 2:
-                    p.p2 = e.Location;
+                case 2:                    
+                    gr.DrawRectangle(pen1, p.p0.X - 2, p.p0.Y - 2, 4, 4);
+                    gr.DrawRectangle(pen1, p.p1.X - 2, p.p1.Y - 2, 4, 4);
+                    gr.DrawRectangle(pen1, p.p2.X - 2, p.p2.Y - 2, 4, 4);
                     gr.DrawLine(pen, p.p1, p.p2);
+                    gr.DrawLine(pen, p.p0, p.p1);                    
+                    gr.DrawLine(pen, p.p1, p.p2);
+
                     CentrLine(image, image.Size.Width, image.Size.Height);
                     gr.DrawLine(pen1, p.x0, p.h, p.x2, p.h);
                     if (p.h < p.p1.Y)
@@ -212,6 +229,7 @@ namespace WindowsFormsApplication1
                     else
                         p.x1 = Crossing(p.p1, p.p2, new System.Drawing.Point(p.x0, p.h), new System.Drawing.Point(p.x2, p.h));
                     gr.DrawRectangle(pen, p.x1 - 2, p.h - 2, 4, 4);
+                                        
                     break;
                 case 3:
                     p.p3 = e.Location;
