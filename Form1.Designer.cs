@@ -163,6 +163,7 @@
             this.отчётОВсехВыборкахToolStripMenuItem.Name = "отчётОВсехВыборкахToolStripMenuItem";
             this.отчётОВсехВыборкахToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.отчётОВсехВыборкахToolStripMenuItem.Text = "Отчёт о всех выборках";
+            this.отчётОВсехВыборкахToolStripMenuItem.Click += new System.EventHandler(this.отчётОВсехВыборкахToolStripMenuItem_Click);
             // 
             // сравнениеToolStripMenuItem
             // 

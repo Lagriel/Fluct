@@ -294,7 +294,7 @@ namespace WindowsFormsApplication1
             saveFileDialog2.FileName = "";
             if (saveFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                if (Report.singleReport(saveFileDialog2.FileName))
+                if (Report.generateSingleReport(saveFileDialog2.FileName))
                     MessageBox.Show("Отчёт успешно сохранён", "Всё ок.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else MessageBox.Show("При сохранении отчёта произошла ошибка. \n Отчёт не сохранён", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -335,6 +335,17 @@ namespace WindowsFormsApplication1
             if (header == null || !header.Equals(indexStr))
                 this.dataGridViewLeafs.Rows[index].HeaderCell.Value = indexStr;
             dataGridViewLeafs.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+        }
+
+        private void отчётОВсехВыборкахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog2.FileName = "";
+            if (saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                if (Report.generateFullReport(saveFileDialog2.FileName))
+                    MessageBox.Show("Отчёт успешно сохранён", "Всё ок.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show("При сохранении отчёта произошла ошибка. \n Отчёт не сохранён", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         
 

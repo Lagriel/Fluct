@@ -10,41 +10,86 @@ namespace WindowsFormsApplication1
 {
     class Report
     {
-        public static bool singleReport(string fileName)
+        static Format normalFormat;
+        static Format borderBottomFormat;
+        static Format borderLeftFormat;
+        static Format mediumFormat;
+        static Book book;
+
+        public static bool generateSingleReport(string fileName)
+        {
+            Book book = createBook();
+            if (!crateSheet(Data.sel)) return false;
+            if (!saveBook(fileName)) return false;
+            return true;        
+        }
+
+        public static bool generateFullReport(string fileName)
+        {
+            Book book = createBook();
+
+            DataTable dt = Data.bd.Execute("SELECT id FROM sel");                
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (!crateSheet(Convert.ToInt32(row["id"]))) return false;                    
+                }
+                if (!saveBook(fileName)) return false;
+                return true;     
+        }
+
+        static bool saveBook(string fileName)
         {
             try
             {
-                Book book = new BinBook();
+                book.save(fileName);
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+            }
+        }
+
+        static Book createBook()
+        {
+            book = new BinBook();
+
+            normalFormat = book.addFormat();
+            normalFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
+            normalFormat.setBorderColor(Color.COLOR_BLACK);
+
+            borderBottomFormat = book.addFormat();
+            borderBottomFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
+            borderBottomFormat.setBorderColor(Color.COLOR_BLACK);
+            borderBottomFormat.borderBottom = libxl.BorderStyle.BORDERSTYLE_MEDIUM;
+
+            borderLeftFormat = book.addFormat();
+            borderLeftFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
+            borderLeftFormat.setBorderColor(Color.COLOR_BLACK);
+            borderLeftFormat.borderLeft = libxl.BorderStyle.BORDERSTYLE_MEDIUM;
+
+            mediumFormat = book.addFormat();
+            mediumFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_MEDIUM);
+            mediumFormat.setBorderColor(Color.COLOR_BLACK);
+
+            return book;
+        }
 
 
-                Format normalFormat = book.addFormat();
-                normalFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
-                normalFormat.setBorderColor(Color.COLOR_BLACK);
-
-                Format borderBottomFormat = book.addFormat();
-                borderBottomFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
-                borderBottomFormat.setBorderColor(Color.COLOR_BLACK);
-                borderBottomFormat.borderBottom = libxl.BorderStyle.BORDERSTYLE_MEDIUM;
-
-                Format borderLeftFormat = book.addFormat();
-                borderLeftFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_THIN);
-                borderLeftFormat.setBorderColor(Color.COLOR_BLACK);
-                borderLeftFormat.borderLeft = libxl.BorderStyle.BORDERSTYLE_MEDIUM;
-
-                Format mediumFormat = book.addFormat();
-                mediumFormat.setBorder(libxl.BorderStyle.BORDERSTYLE_MEDIUM);
-                mediumFormat.setBorderColor(Color.COLOR_BLACK);
-
-
-                Sheet sheet = book.addSheet("Invoice");
+        static bool crateSheet(int sel)
+        {
+            try
+            {
 
                 Select select = new Select()
                 .From("sel")
                 .Columns("name, typeofleaf_id, date, place, comment, grade")
                 .Columns("name, typeofleaf_id, date, place, comment, grade, deviation")
-                .Where("id = " + Data.sel);
-
+                .Where("id = " + sel);
                 Dictionary<string, object> item = Data.bd.FetchOneRow(select);
+
+                Sheet sheet = book.addSheet(sel.ToString() + ". " + item["name"].ToString());
+
                 sheet.writeStr(2, 1, "Название выборки", mediumFormat);
                 sheet.writeStr(2, 3, item["name"].ToString(), mediumFormat);
                 sheet.writeStr(3, 1, "Тип листьев", mediumFormat);
@@ -68,7 +113,7 @@ namespace WindowsFormsApplication1
                 sheet.setCol(1, 20);
                 sheet.setCol(2, 20);
                 int i = 12;
-                DataTable dt = Data.bd.Execute("SELECT grade, comment, params FROM leaf WHERE sel_id = " + Data.sel.ToString());
+                DataTable dt = Data.bd.Execute("SELECT grade, comment, params FROM leaf WHERE sel_id = " + sel.ToString());
                 bool first = true;
                 foreach (DataRow row in dt.Rows)
                 {
@@ -110,20 +155,17 @@ namespace WindowsFormsApplication1
                     }
                     i++;
                 }
-
-                //sheet.writeStr(0, 0, "!");
-                book.save(fileName);
                 return true;
-               // MessageBox.Show("Отчёт успешно сохранён", "Всё ок.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                
+ 
             }
+
             catch (System.Exception ex)
             {
-                //throw new System.Exception();
                 return false;
-                //MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
-        
+ 
+
         }
 
     }
