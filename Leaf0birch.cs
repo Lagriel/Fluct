@@ -71,67 +71,165 @@ namespace WindowsFormsApplication1
             return ("");
         }
 
+        //Возврат параметров.
+        public override double getAttributeValues(int number=0, int side=0) //1-left 2-right
+        {
+            switch (number)
+            {       
+                case 1:
+                    {
+                        switch (side)
+                        {                            
+                            case 1:
+                                {
+                                    return Math.Abs(p.x1 - p.x0);
+                                }
+                            case 2:
+                                {
+                                    return Math.Abs(p.x2 - p.x1); 
+                                }
+                            default:
+                                {
+                                    double l = getAttributeValues(1, 1);
+                                    double r = getAttributeValues(1, 2);
+                                    return ((l + r) != 0) ? Math.Abs(l - r) / Math.Abs(l + r) : 0;
+                                }
+                        }
+                    }
+                case 2:
+                    {
+                        switch (side)
+                        {       
+                            case 1:
+                                {
+                                    return Math.Abs(Math.Sqrt(Math.Pow(p.p10.X - p.p9.X, 2) + Math.Pow(p.p10.Y - p.p9.Y, 2)));
+                                }
+                            case 2:
+                                {
+                                    return Math.Abs(Math.Sqrt(Math.Pow(Convert.ToDouble(p.p8.X - p.p7.X), 2) + Math.Pow(Convert.ToDouble(p.p8.Y - p.p7.Y), 2)));                                    
+                                }
+                            default:
+                                {
+                                    double l = getAttributeValues(2, 1);
+                                    double r = getAttributeValues(2, 2);
+                                    return ((l + r) != 0) ? Math.Abs(l - r) / Math.Abs(l + r) : 0;
+                                }
+                        }
+                    }
+                case 3:
+                    {
+                        switch (side)
+                        {                                                 
+                            case 1:
+                                {
+                                    return Math.Abs(p.p3.Y - p.p7.Y);
+                                }
+                            case 2:
+                                {
+                                    return Math.Abs(p.p5.Y - p.p9.Y);
+                                }
+                            default:
+                                {
+                                    double l = getAttributeValues(3, 1);
+                                    double r = getAttributeValues(3, 2);
+                                    return ((l + r) != 0) ? Math.Abs(l - r) / Math.Abs(l + r) : 0;
+                                }
+                        }
+                    }
+                case 4:
+                    {
+                        switch (side)
+                        {       
+                            case 1:
+                                {
+                                    return Math.Abs(Math.Sqrt(Math.Pow(p.p4.X - p.p8.X, 2) + Math.Pow(p.p4.Y - p.p8.Y, 2)));
+                                }
+                            case 2:
+                                {
+                                    return Math.Abs(Math.Sqrt(Math.Pow(p.p6.X - p.p10.X, 2) + Math.Pow(p.p6.Y - p.p10.Y, 2)));
+                                }
+                            default:
+                                {
+                                    double l = getAttributeValues(4, 1);
+                                    double r = getAttributeValues(4, 2);
+                                    return ((l + r) != 0) ? Math.Abs(l - r) / Math.Abs(l + r) : 0;
+                                }
+                        }
+                    }
+                case 5:
+                    {
+                        switch (side)
+                        {       
+                            case 1:
+                                {                                    
+                                    return Vector.AngleBetween(new Vector(Math.Abs(p.p1.X - p.p2.X), Math.Abs(p.p1.Y - p.p2.Y)), new Vector(Math.Abs(p.p8.X - p.p7.X), Math.Abs(p.p8.Y - p.p7.Y)));                                   
+                                }
+                            case 2:
+                                {
+                                    return Vector.AngleBetween(new Vector(Math.Abs(p.p1.X - p.p2.X), Math.Abs(p.p1.Y - p.p2.Y)), new Vector(Math.Abs(p.p10.X - p.p9.X), Math.Abs(p.p10.Y - p.p9.Y)));                                  
+                                }
+                            default:
+                                {
+                                    double l = getAttributeValues(5, 1);
+                                    double r = getAttributeValues(5, 2);
+                                    return ((l + r) != 0) ? Math.Abs(l - r) / Math.Abs(l + r) : 0;
+                                }
+                        }
+                    }
+                default:
+                    {
+                        switch (side)
+                        {
+                            case 1:
+                                {
+                                    return ((getAttributeValues(1, 1) + getAttributeValues(2, 1) + getAttributeValues(3, 1) + getAttributeValues(4, 1) + getAttributeValues(5, 1)) / 5);
+                                }
+                            case 2:
+                                {
+                                    return ((getAttributeValues(1, 2) + getAttributeValues(2, 2) + getAttributeValues(3, 2) + getAttributeValues(4, 2) + getAttributeValues(5, 2)) / 5);
+                                }
+                            default:
+                                {
+                                    return ((getAttributeValues(1, 0) + getAttributeValues(2, 0) + getAttributeValues(3, 0) + getAttributeValues(4, 0) + getAttributeValues(5, 0)) / 5);
+                                }
+                        }
+                    }
+            }
+
+                
+        }
+
+        public override int getNumberOfAttributes()
+        { return 5; }
+
+        public override string getNameOfAttribute(int number=0)
+        {
+            switch (number)
+            {
+                case 1: return "Ширина половинок листа.";
+                case 2: return "Расстояние от основания до конца жилки второго порядка, второй от основания листа.";
+                case 3: return "Расстояние между основаниями первой и второй жилок второго порядка.";
+                case 4: return "Расстояние между концами первой и второй жилок второго порядка.";
+                case 5: return "Угол между главной жилкой и второй от основания листа жилкой второго порядка.";
+                default: return "В среднем";                    
+            }
+        }
+
         //Вычисление ассимметрии
         public override double assim(DataGridView q)
-        {           
-            //1                               
-            double pr1l = Math.Abs(p.x1 - p.x0);
-            double pr1r = Math.Abs(p.x2 - p.x1);
-            double pr1 = ((pr1l + pr1r) != 0) ? Math.Abs(pr1l - pr1r) / Math.Abs(pr1l + pr1r) : 0;
-            q.Rows.Add("Ширина половинок листа.", pr1l.ToString(), pr1r.ToString(), pr1.ToString());
-            //2                
-            double pr2l = Math.Abs(Math.Sqrt(Math.Pow(Convert.ToDouble(p.p8.X - p.p7.X), 2) + Math.Pow(Convert.ToDouble(p.p8.Y - p.p7.Y), 2)));
-            double pr2r = Math.Abs(Math.Sqrt(Math.Pow(p.p10.X - p.p9.X, 2) + Math.Pow(p.p10.Y - p.p9.Y, 2)));
-            double pr2 = ((pr2l + pr2r) != 0) ? Math.Abs(pr2l - pr2r) / Math.Abs(pr2l + pr2r) : 0;
-            q.Rows.Add("Расстояние от основания до конца жилки второго порядка, второй от основания листа.", pr2l.ToString(), pr2r.ToString(), pr2.ToString());
-            //3
-            double pr3l = Math.Abs(p.p3.Y - p.p7.Y);
-            double pr3r = Math.Abs(p.p5.Y - p.p9.Y);
-            double pr3 = ((pr3l + pr3r) != 0) ? Math.Abs(pr3l - pr3r) / Math.Abs(pr3l + pr3r) : 0;
-            q.Rows.Add("Расстояние между основаниями первой и второй жилок второго порядка.", pr3l.ToString(), pr3r.ToString(), pr3.ToString());
-            //4
-            double pr4l = Math.Abs(Math.Sqrt(Math.Pow(p.p4.X - p.p8.X, 2) + Math.Pow(p.p4.Y - p.p8.Y, 2)));
-            double pr4r = Math.Abs(Math.Sqrt(Math.Pow(p.p6.X - p.p10.X, 2) + Math.Pow(p.p6.Y - p.p10.Y, 2)));
-            double pr4 = ((pr4l + pr4r) != 0) ? Math.Abs(pr4l - pr4r) / Math.Abs(pr4l + pr4r) : 0;
-            q.Rows.Add("Расстояние между концами первой и второй жилок второго порядка.", pr4l.ToString(), pr4r.ToString(), pr4.ToString());
-            //5            
-            Vector v0 = new Vector(Math.Abs(p.p1.X - p.p2.X), Math.Abs(p.p1.Y - p.p2.Y));
-            Vector v1 = new Vector(Math.Abs(p.p8.X - p.p7.X), Math.Abs(p.p8.Y - p.p7.Y));
-            Vector v2 = new Vector(Math.Abs(p.p10.X - p.p9.X), Math.Abs(p.p10.Y - p.p9.Y));
-            double a = Vector.AngleBetween(v0, v1);
-            double b = Vector.AngleBetween(v0, v2);                        
-            double pr5 = ((a + b) != 0) ? Math.Abs(a - b) / Math.Abs(a + b) : 0;
-            q.Rows.Add("Угол между главной жилкой и второй от основания листа жилкой второго порядка.", a.ToString(), b.ToString(), pr5.ToString());
-            return ((pr1 + pr2 + pr3 + pr4 + pr5) / 5);            
+        {               
+            q.Rows.Add("Ширина половинок листа.", getAttributeValues(1, 1).ToString(), getAttributeValues(1, 2).ToString(), getAttributeValues(1, 0).ToString());
+            q.Rows.Add("Расстояние от основания до конца жилки второго порядка, второй от основания листа.", getAttributeValues(2, 1).ToString(), getAttributeValues(2, 2).ToString(), getAttributeValues(2, 0).ToString());
+            q.Rows.Add("Расстояние между основаниями первой и второй жилок второго порядка.", getAttributeValues(3, 1).ToString(), getAttributeValues(3, 2).ToString(), getAttributeValues(3, 0).ToString());           
+            q.Rows.Add("Расстояние между концами первой и второй жилок второго порядка.", getAttributeValues(4, 1).ToString(), getAttributeValues(4, 2).ToString(), getAttributeValues(4, 0).ToString());            
+            q.Rows.Add("Угол между главной жилкой и второй от основания листа жилкой второго порядка.", getAttributeValues(5, 1).ToString(), getAttributeValues(5, 2).ToString(), getAttributeValues(5, 0).ToString());
+            return getAttributeValues(0, 0);     
         }
                 
         //Вычисление ассимметрии
         public override double assim()
-        {
-            //1                               
-            double pr1l = Math.Abs(p.x1 - p.x0);
-            double pr1r = Math.Abs(p.x2 - p.x1);
-            double pr1 = ((pr1l + pr1r) != 0) ? Math.Abs(pr1l - pr1r) / Math.Abs(pr1l + pr1r) : 0;
-            //2                
-            double pr2l = Math.Abs(Math.Sqrt(Math.Pow(Convert.ToDouble(p.p8.X - p.p7.X), 2) + Math.Pow(Convert.ToDouble(p.p8.Y - p.p7.Y), 2)));
-            double pr2r = Math.Abs(Math.Sqrt(Math.Pow(p.p10.X - p.p9.X, 2) + Math.Pow(p.p10.Y - p.p9.Y, 2)));
-            double pr2 = ((pr2l + pr2r) != 0) ? Math.Abs(pr2l - pr2r) / Math.Abs(pr2l + pr2r) : 0;
-            //3
-            double pr3l = Math.Abs(p.p3.Y - p.p7.Y);
-            double pr3r = Math.Abs(p.p5.Y - p.p9.Y);
-            double pr3 = ((pr3l + pr3r) != 0) ? Math.Abs(pr3l - pr3r) / Math.Abs(pr3l + pr3r) : 0;
-            //4
-            double pr4l = Math.Abs(Math.Sqrt(Math.Pow(p.p4.X - p.p8.X, 2) + Math.Pow(p.p4.Y - p.p8.Y, 2)));
-            double pr4r = Math.Abs(Math.Sqrt(Math.Pow(p.p6.X - p.p10.X, 2) + Math.Pow(p.p6.Y - p.p10.Y, 2)));
-            double pr4 = ((pr4l + pr4r) != 0) ? Math.Abs(pr4l - pr4r) / Math.Abs(pr4l + pr4r) : 0;
-            //5                
-            Vector v0 = new Vector(Math.Abs(p.p1.X - p.p2.X), Math.Abs(p.p1.Y - p.p2.Y));
-            Vector v1 = new Vector(Math.Abs(p.p8.X - p.p7.X), Math.Abs(p.p8.Y - p.p7.Y));
-            Vector v2 = new Vector(Math.Abs(p.p10.X - p.p9.X), Math.Abs(p.p10.Y - p.p9.Y));
-            double pr5l = Vector.AngleBetween(v0, v1);
-            double pr5r = Vector.AngleBetween(v0, v2);
-            double pr5 = ((pr5l + pr5r) != 0) ? Math.Abs(pr5l - pr5r) / Math.Abs(pr5l + pr5r) : 0;       
-            return ((pr1 + pr2 + pr3 + pr4 + pr5) / 5);            
+        {          
+            return getAttributeValues(0,0);            
         }
         
         //Нахождение центральной горизонтальной линии

@@ -28,12 +28,18 @@ namespace WindowsFormsApplication1
             return (int)x;
         }
 
+        public abstract int getNumberOfAttributes();
+        public abstract string getNameOfAttribute(int number=0);
+
         //Сериализация параметров
         public abstract byte[] getParams();
 
+        //Возврат параметров.
+        public abstract double getAttributeValues(int number=0, int side=0);
+
         //Десериализация параметров
         public abstract void setParams(MemoryStream ms);
-
+        
 
         public abstract void drawInitLine(Image image);
 

@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
             helpProvider1.SetHelpKeyword(this, "page_6.html");
             helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             helpProvider1.SetShowHelp(this, true);
+             
         }
         
 
@@ -290,8 +291,13 @@ namespace WindowsFormsApplication1
 
         private void краткийОтчётОВыборкеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 f = new Form5();
-            f.ShowDialog();
+            saveFileDialog2.FileName = "";
+            if (saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                if (Report.singleReport(saveFileDialog2.FileName))
+                    MessageBox.Show("Отчёт успешно сохранён", "Всё ок.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show("При сохранении отчёта произошла ошибка. \n Отчёт не сохранён", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void сравнениеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -319,6 +325,16 @@ namespace WindowsFormsApplication1
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, helpProvider1.HelpNamespace);
+        }
+
+        private void dataGridViewLeafs_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            int index = e.RowIndex;
+            string indexStr = (index + 1).ToString();
+            object header = this.dataGridViewLeafs.Rows[index].HeaderCell.Value;
+            if (header == null || !header.Equals(indexStr))
+                this.dataGridViewLeafs.Rows[index].HeaderCell.Value = indexStr;
+            dataGridViewLeafs.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
         
 

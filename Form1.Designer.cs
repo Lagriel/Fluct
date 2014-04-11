@@ -80,6 +80,8 @@
             this.ColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.отчётОВсехВыборкахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxSel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -143,6 +145,7 @@
             // 
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.краткийОтчётОВыборкеToolStripMenuItem,
+            this.отчётОВсехВыборкахToolStripMenuItem,
             this.сравнениеToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
@@ -151,14 +154,14 @@
             // краткийОтчётОВыборкеToolStripMenuItem
             // 
             this.краткийОтчётОВыборкеToolStripMenuItem.Name = "краткийОтчётОВыборкеToolStripMenuItem";
-            this.краткийОтчётОВыборкеToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.краткийОтчётОВыборкеToolStripMenuItem.Text = "Краткий отчёт о выборке";
+            this.краткийОтчётОВыборкеToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.краткийОтчётОВыборкеToolStripMenuItem.Text = "Отчёт о текущей выборке";
             this.краткийОтчётОВыборкеToolStripMenuItem.Click += new System.EventHandler(this.краткийОтчётОВыборкеToolStripMenuItem_Click);
             // 
             // сравнениеToolStripMenuItem
             // 
             this.сравнениеToolStripMenuItem.Name = "сравнениеToolStripMenuItem";
-            this.сравнениеToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.сравнениеToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.сравнениеToolStripMenuItem.Text = "Сравнение";
             this.сравнениеToolStripMenuItem.Click += new System.EventHandler(this.сравнениеToolStripMenuItem_Click);
             // 
@@ -569,11 +572,11 @@
             this.dataGridViewLeafs.MultiSelect = false;
             this.dataGridViewLeafs.Name = "dataGridViewLeafs";
             this.dataGridViewLeafs.ReadOnly = true;
-            this.dataGridViewLeafs.RowHeadersVisible = false;
             this.dataGridViewLeafs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewLeafs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLeafs.Size = new System.Drawing.Size(344, 275);
             this.dataGridViewLeafs.TabIndex = 16;
+            this.dataGridViewLeafs.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewLeafs_RowPrePaint);
             this.dataGridViewLeafs.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // ColumnNumber
@@ -583,7 +586,8 @@
             this.ColumnNumber.Name = "ColumnNumber";
             this.ColumnNumber.ReadOnly = true;
             this.ColumnNumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnNumber.Width = 50;
+            this.ColumnNumber.Visible = false;
+            this.ColumnNumber.Width = 20;
             // 
             // ColumnGrade
             // 
@@ -618,6 +622,17 @@
             // helpProvider1
             // 
             this.helpProvider1.HelpNamespace = "K:\\Универ\\Научная\\5\\Help.chm";
+            // 
+            // saveFileDialog2
+            // 
+            this.saveFileDialog2.DefaultExt = "xls";
+            this.saveFileDialog2.Filter = "*.xls|xls";
+            // 
+            // отчётОВсехВыборкахToolStripMenuItem
+            // 
+            this.отчётОВсехВыборкахToolStripMenuItem.Name = "отчётОВсехВыборкахToolStripMenuItem";
+            this.отчётОВсехВыборкахToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.отчётОВсехВыборкахToolStripMenuItem.Text = "Отчёт о всех выборках";
             // 
             // Form1
             // 
@@ -691,9 +706,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGrade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnComment;
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem краткийОтчётОВыборкеToolStripMenuItem;
         private System.Windows.Forms.Label labelQuality;
@@ -702,6 +714,11 @@
         private System.Windows.Forms.Label labelSigmaValue;
         private System.Windows.Forms.ToolStripMenuItem сравнениеToolStripMenuItem;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnComment;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private System.Windows.Forms.ToolStripMenuItem отчётОВсехВыборкахToolStripMenuItem;
     }
 }
 
