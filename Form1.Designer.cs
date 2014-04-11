@@ -38,6 +38,7 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.краткийОтчётОВыборкеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётОВсехВыборкахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сравнениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +82,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.отчётОВсехВыборкахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxSel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -157,6 +157,12 @@
             this.краткийОтчётОВыборкеToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.краткийОтчётОВыборкеToolStripMenuItem.Text = "Отчёт о текущей выборке";
             this.краткийОтчётОВыборкеToolStripMenuItem.Click += new System.EventHandler(this.краткийОтчётОВыборкеToolStripMenuItem_Click);
+            // 
+            // отчётОВсехВыборкахToolStripMenuItem
+            // 
+            this.отчётОВсехВыборкахToolStripMenuItem.Name = "отчётОВсехВыборкахToolStripMenuItem";
+            this.отчётОВсехВыборкахToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.отчётОВсехВыборкахToolStripMenuItem.Text = "Отчёт о всех выборках";
             // 
             // сравнениеToolStripMenuItem
             // 
@@ -627,12 +633,6 @@
             // 
             this.saveFileDialog2.DefaultExt = "xls";
             this.saveFileDialog2.Filter = "*.xls|xls";
-            // 
-            // отчётОВсехВыборкахToolStripMenuItem
-            // 
-            this.отчётОВсехВыборкахToolStripMenuItem.Name = "отчётОВсехВыборкахToolStripMenuItem";
-            this.отчётОВсехВыборкахToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.отчётОВсехВыборкахToolStripMenuItem.Text = "Отчёт о всех выборках";
             // 
             // Form1
             // 

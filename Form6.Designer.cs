@@ -71,11 +71,16 @@
             this.comboBoxRight = new System.Windows.Forms.ComboBox();
             this.comboBoxLeft = new System.Windows.Forms.ComboBox();
             this.buttonRun = new System.Windows.Forms.Button();
-            this.labelResult = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelStudent = new System.Windows.Forms.Label();
+            this.labelVeracity = new System.Windows.Forms.Label();
+            this.labelValueStudent = new System.Windows.Forms.Label();
+            this.labelValueVeracity = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -84,7 +89,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonRun, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelResult, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -530,14 +535,57 @@
             this.buttonRun.UseVisualStyleBackColor = true;
             this.buttonRun.Click += new System.EventHandler(this.button1_Click);
             // 
-            // labelResult
+            // tableLayoutPanel4
             // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(3, 242);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(41, 13);
-            this.labelResult.TabIndex = 2;
-            this.labelResult.Text = "label37";
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.labelStudent, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labelVeracity, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labelValueStudent, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labelValueVeracity, 1, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 245);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(509, 38);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // labelStudent
+            // 
+            this.labelStudent.AutoSize = true;
+            this.labelStudent.Location = new System.Drawing.Point(3, 0);
+            this.labelStudent.Name = "labelStudent";
+            this.labelStudent.Size = new System.Drawing.Size(118, 13);
+            this.labelStudent.TabIndex = 0;
+            this.labelStudent.Text = "t-критерий Стьюдента";
+            // 
+            // labelVeracity
+            // 
+            this.labelVeracity.AutoSize = true;
+            this.labelVeracity.Location = new System.Drawing.Point(3, 19);
+            this.labelVeracity.Name = "labelVeracity";
+            this.labelVeracity.Size = new System.Drawing.Size(128, 13);
+            this.labelVeracity.TabIndex = 1;
+            this.labelVeracity.Text = "Степень достоверности";
+            // 
+            // labelValueStudent
+            // 
+            this.labelValueStudent.AutoSize = true;
+            this.labelValueStudent.Location = new System.Drawing.Point(257, 0);
+            this.labelValueStudent.Name = "labelValueStudent";
+            this.labelValueStudent.Size = new System.Drawing.Size(0, 13);
+            this.labelValueStudent.TabIndex = 2;
+            // 
+            // labelValueVeracity
+            // 
+            this.labelValueVeracity.AutoSize = true;
+            this.labelValueVeracity.Location = new System.Drawing.Point(257, 19);
+            this.labelValueVeracity.Name = "labelValueVeracity";
+            this.labelValueVeracity.Size = new System.Drawing.Size(0, 13);
+            this.labelValueVeracity.TabIndex = 3;
             // 
             // Form6
             // 
@@ -548,12 +596,13 @@
             this.Name = "Form6";
             this.Text = "Сравнение";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -603,7 +652,11 @@
         private System.Windows.Forms.Label labelSigmaRight;
         private System.Windows.Forms.Label labelSigmaValueRight;
         private System.Windows.Forms.Button buttonRun;
-        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label labelStudent;
+        private System.Windows.Forms.Label labelVeracity;
+        private System.Windows.Forms.Label labelValueStudent;
+        private System.Windows.Forms.Label labelValueVeracity;
 
     }
 }

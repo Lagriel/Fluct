@@ -71,8 +71,10 @@ namespace WindowsFormsApplication1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            labelResult.Text = ((Convert.ToDouble(labelGradeValueLeft.Text) - Convert.ToDouble(labelGradeValueRight.Text))/(Math.Sqrt(Math.Pow(Convert.ToDouble(labelSigmaValueLeft.Text),2)+Math.Pow(Convert.ToDouble(labelSigmaValueRight.Text),2)))).ToString();
+        {            
+            double student = Math.Abs(Convert.ToDouble(labelGradeValueLeft.Text) - Convert.ToDouble(labelGradeValueRight.Text))/(Math.Sqrt(Math.Pow(Convert.ToDouble(labelSigmaValueLeft.Text),2)/Convert.ToInt32(labelCountValueLeft.Text)+Math.Pow(Convert.ToDouble(labelSigmaValueRight.Text),2)/Convert.ToInt32(labelCountValueRight.Text)));           
+            labelValueStudent.Text = student.ToString();
+            labelValueVeracity.Text = Data.veracity((Convert.ToInt32(labelCountValueLeft.Text) + Convert.ToInt32(labelCountValueRight.Text)) / 2, student).ToString();
         }
     }
 }
